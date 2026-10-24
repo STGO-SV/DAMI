@@ -1,0 +1,45 @@
+
+ + Options
+     | Auto-detection:     Enabled
+     | Auto-download:      Enabled
+
+ + Oracle JDK 8 (1.8.0_431-b10)
+     | Location:           C:\Program Files\Java\jdk-1.8
+     | Language Version:   8
+     | Vendor:             Oracle
+     | Architecture:       amd64
+     | Is JDK:             true
+     | Detected by:        Windows Registry
+
+ + Amazon Corretto JDK 17 (17.0.19+10-LTS)
+     | Location:           C:\Users\santi\.jdks\corretto-17.0.19
+     | Language Version:   17
+     | Vendor:             Amazon Corretto
+     | Architecture:       amd64
+     | Is JDK:             true
+     | Detected by:        IntelliJ
+
+ + Oracle JDK 17 (17.0.9+11-LTS-201)
+     | Location:           C:\Program Files\Java\jdk-17
+     | Language Version:   17
+     | Vendor:             Oracle
+     | Architecture:       amd64
+     | Is JDK:             true
+     | Detected by:        Windows Registry
+
+ + Amazon Corretto JDK 21 (21.0.11+10-LTS)
+     | Location:           C:\Users\santi\.jdks\corretto-21.0.11
+     | Language Version:   21
+     | Vendor:             Amazon Corretto
+     | Architecture:       amd64
+     | Is JDK:             true
+     | Detected by:        IntelliJ
+
+ + Amazon Corretto JDK 21 (21.0.12.1+12-LTS)
+     | Location:           C:\Users\santi\.jdks\corretto-21.0.12.1
+     | Language Version:   21
+     | Vendor:             Amazon Corretto
+     | Architecture:       amd64
+     | Is JDK:             true
+     | Detected by:        environment variable 'JAVA_HOME'
+

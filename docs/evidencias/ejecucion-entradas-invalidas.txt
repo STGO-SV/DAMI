@@ -1,0 +1,41 @@
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+=== Pizzería Kotlin | Nuevo pedido ===
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Teléfono inválido o ausente. Se registrará: No informado.
+Pizza: Margarita | Precio unitario: $8.000 CLP
+Inventario: 10 unidades (una por pizza).
+Cantidad de pizzas (entero mayor que cero):
+Cantidad inválida. Ingrese un entero positivo dentro del rango Int.
+Cantidad de pizzas (entero mayor que cero):
+Cantidad inválida. Ingrese un entero positivo dentro del rango Int.
+Cantidad de pizzas (entero mayor que cero):
+Cantidad inválida. Ingrese un entero positivo dentro del rango Int.
+Cantidad de pizzas (entero mayor que cero):
+Disponibilidad confirmada. Inventario actualizado.
+
+=== Resumen del pedido ===
+Cliente: Ana
+Dirección: Centro
+Teléfono: No informado
+Pizza: Margarita
+Precio unitario: $8.000 CLP
+Identificador: PED-001
+Cantidad: 4
+Subtotal solicitado: $32.000 CLP
+Descuento aplicado: $3.200 CLP
+Total a pagar: $28.800 CLP
+Estado: Confirmado
+Repartidor asignado: R01 - Repartidor de turno
+Inventario restante: 6
+
+BUILD SUCCESSFUL in 1s
+2 actionable tasks: 1 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.6.0/userguide/configuration_cache_enabling.html

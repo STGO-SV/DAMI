@@ -1,0 +1,35 @@
+Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --status for details
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :processResources NO-SOURCE
+> Task :compileKotlin
+> Task :compileJava NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+=== Pizzería Kotlin | Nuevo pedido ===
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Pizza: Margarita | Precio unitario: $8.000 CLP
+Inventario: 10 unidades (una por pizza).
+Cantidad de pizzas (entero mayor que cero):
+Disponibilidad confirmada. Inventario actualizado.
+
+=== Resumen del pedido ===
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: +56901234567
+Pizza: Margarita
+Precio unitario: $8.000 CLP
+Identificador: PED-001
+Cantidad: 4
+Subtotal solicitado: $32.000 CLP
+Descuento aplicado: $3.200 CLP
+Total a pagar: $28.800 CLP
+Estado: Confirmado
+Repartidor asignado: R01 - Repartidor de turno
+Inventario restante: 6
+
+BUILD SUCCESSFUL in 13s
+2 actionable tasks: 2 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.6.0/userguide/configuration_cache_enabling.html

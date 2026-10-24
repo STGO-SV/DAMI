@@ -1,0 +1,36 @@
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+=== Pizzería Kotlin | Nuevo pedido ===
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Teléfono inválido o ausente. Se registrará: No informado.
+Pizza: Margarita | Precio unitario: $8.000 CLP
+Inventario: 10 unidades (una por pizza).
+Cantidad de pizzas (entero mayor que cero):
+Fin de entrada. Se utilizará la cantidad predeterminada: 1.
+Disponibilidad confirmada. Inventario actualizado.
+
+=== Resumen del pedido ===
+Cliente: Cliente sin nombre
+Dirección: Retiro en local
+Teléfono: No informado
+Pizza: Margarita
+Precio unitario: $8.000 CLP
+Identificador: PED-001
+Cantidad: 1
+Subtotal solicitado: $8.000 CLP
+Descuento aplicado: $0 CLP
+Total a pagar: $8.000 CLP
+Estado: Confirmado
+Repartidor asignado: R01 - Repartidor de turno
+Inventario restante: 9
+
+BUILD SUCCESSFUL in 1s
+2 actionable tasks: 1 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.6.0/userguide/configuration_cache_enabling.html
