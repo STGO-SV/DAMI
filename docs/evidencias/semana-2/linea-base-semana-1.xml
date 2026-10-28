@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.PedidoTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-10-28T16:45:03.370Z" hostname="LAPTOP-LAL7LJG6" time="0.135">
+  <properties/>
+  <testcase name="stockSuperiorSeDescuenta()" classname="org.example.PedidoTest" time="0.03"/>
+  <testcase name="unaPizzaSinDescuento()" classname="org.example.PedidoTest" time="0.0"/>
+  <testcase name="multiplicacionNoDesbordaIntYDescuentoTruncaFraccion()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="resumenRechazadoEsConsistente()" classname="org.example.PedidoTest" time="0.033"/>
+  <testcase name="cuatroPizzasConDiezPorCiento()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="cincoPizzasConDiezPorCiento()" classname="org.example.PedidoTest" time="0.0"/>
+  <testcase name="cantidadesInvalidasSeRechazan()" classname="org.example.PedidoTest" time="0.002"/>
+  <testcase name="stockInsuficienteConservaInventarioSinCobroNiReparto()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="confirmadoTieneRepartidor()" classname="org.example.PedidoTest" time="0.0"/>
+  <testcase name="telefonoConservaPrefijoYCeros()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="entradasInvalidasRepreguntanYTelefonoInvalidoAvisa()" classname="org.example.PedidoTest" time="0.013"/>
+  <testcase name="stockExactoConfirmaYAgotaInventario()" classname="org.example.PedidoTest" time="0.0"/>
+  <testcase name="resumenConfirmadoContieneTodosLosDatos()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="telefonosInvalidosSeDetectan()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="tresPizzasSinDescuento()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="textosVaciosYNulosUsanPredeterminado()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="procesamientoRechazaParametrosInvalidos()" classname="org.example.PedidoTest" time="0.015"/>
+  <testcase name="entradaNulaCompletaTerminaSinExcepcion()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="stockCeroRechaza()" classname="org.example.PedidoTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

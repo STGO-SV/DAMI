@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.RecuperacionEntradaTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-28T20:19:36.401Z" hostname="LAPTOP-LAL7LJG6" time="0.05">
+  <properties/>
+  <testcase name="entradasVaciasConservanPredeterminadosSinConfundirseConEof()" classname="org.example.RecuperacionEntradaTest" time="0.003"/>
+  <testcase name="cantidadCeroSeguidaDeValidaConservaProducto()" classname="org.example.RecuperacionEntradaTest" time="0.002"/>
+  <testcase name="seleccionInvalidaSeguidaDeValidaRepiteSoloLaPregunta()" classname="org.example.RecuperacionEntradaTest" time="0.002"/>
+  <testcase name="productosAnterioresSeConservanAlCorregirSegundaSeleccion()" classname="org.example.RecuperacionEntradaTest" time="0.003"/>
+  <testcase name="eofEnCadaCampoYTrasLineaValidaPreservaLaJornadaPrevia()" classname="org.example.RecuperacionEntradaTest" time="0.01"/>
+  <testcase name="cantidadNoNumericaSeguidaDeValidaConservaProducto()" classname="org.example.RecuperacionEntradaTest" time="0.002"/>
+  <testcase name="eofDuranteSeleccionCancelaSinInterpretarloComoMargarita()" classname="org.example.RecuperacionEntradaTest" time="0.002"/>
+  <testcase name="variasSeleccionesInvalidasIncluyenDesbordamientoYRangos()" classname="org.example.RecuperacionEntradaTest" time="0.002"/>
+  <testcase name="cantidadFueraDeIntSeguidaDeValidaConservaProducto()" classname="org.example.RecuperacionEntradaTest" time="0.002"/>
+  <testcase name="cantidadNegativaSeguidaDeValidaConservaProducto()" classname="org.example.RecuperacionEntradaTest" time="0.003"/>
+  <testcase name="datosDelClienteSeConservanSinVolverAPreguntar()" classname="org.example.RecuperacionEntradaTest" time="0.005"/>
+  <testcase name="intentosInvalidosNoTienenEfectosAntesDeCompletarElAlta()" classname="org.example.RecuperacionEntradaTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

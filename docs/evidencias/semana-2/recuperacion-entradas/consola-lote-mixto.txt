@@ -1,0 +1,48 @@
+=== Pizzería Kotlin | Semana 2 ===
+Impuesto configurable: 0.19 (supuesto académico). Distancias de reparto simuladas desde el local.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Correo electrónico:
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío: Margarita):
+Pizza Margarita seleccionada.
+Cantidad de pizzas (entero mayor que cero):
+¿Agregar otra pizza al pedido? (s/n):
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío: Margarita):
+Pizza Pepperoni seleccionada.
+Cantidad de pizzas (entero mayor que cero):
+¿Agregar otra pizza al pedido? (s/n):
+Notas opcionales (vacío: Sin notas):
+Disponibilidad confirmada. Puede prepararse el pedido. Inventario actualizado.
+=== Resumen del pedido PED-001 ===
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: +56901234567
+Correo: jose@example.com
+Pizza: Margarita | Precio unitario: $8.000 CLP | Cantidad: 2
+Pizza: Pepperoni | Precio unitario: $9.000 CLP | Cantidad: 2
+Subtotal solicitado: $34.000 CLP
+Descuento aplicado: $3.400 CLP
+Impuestos (19 %): $5.814 CLP
+Total a pagar: $36.414 CLP
+Estado: En preparación
+Repartidor asignado: Sin asignar
+Notas: sin sal
+Notificación local simulada a jose@example.com: pedido PED-001, En preparación.
+Inventario restante: {Masa=6, Tomate=12, Queso=12, Pepperoni=3}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+=== Pedidos del día ===
+PED-001 | José | Margarita x2, Pepperoni x2 | $36.414 CLP | En preparación
+Completados (Entregado): 0 | Pendientes (Registrado, En preparación, Listo, En camino): 1 | Rechazados: 0
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+Inventario (unidades de receta): {Masa=6, Tomate=12, Queso=12, Pepperoni=3}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+=== Pedidos del día ===
+PED-001 | José | Margarita x2, Pepperoni x2 | $36.414 CLP | En preparación
+Completados (Entregado): 0 | Pendientes (Registrado, En preparación, Listo, En camino): 1 | Rechazados: 0
+

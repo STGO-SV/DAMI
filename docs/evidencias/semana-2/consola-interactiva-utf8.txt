@@ -1,0 +1,240 @@
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+=== Pizzería Kotlin | Semana 2 ===
+Impuesto configurable: 0.19 (supuesto académico). Distancias de reparto simuladas desde el local.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+1
+José
+Ñuñoa 123
++56901234567
+jose@example.com
+1
+4
+n3
+PED-001
+4
+PED-001
+5
+PED-001
+1
+Ana
+Centro
+12345678
+ana@example.cl
+2
+2
+n
+sin sal
+1
+Luis
+Centro
+abc
+mal
+1
+0
+-2
+texto
+11
+n
+
+7
+Masa
+-1
+3
+PED-003
+6
+2
+0
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Correo electrónico:
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Q
+Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Q
+Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío o fin de entrada: Margarita):
+Cantidad de pizzas (entero mayor que cero):
+¿Agregar otra pizza al pedido? (s/n):
+Notas opcionales (vacío: Sin notas):
+Disponibilidad confirmada. Puede prepararse el pedido. Inventario actualizado.  
+=== Resumen del pedido PED-001 ===
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: +56901234567
+Correo: jose@example.com
+Pizza: Margarita | Precio unitario: $8.000 CLP | Cantidad: 4
+Subtotal solicitado: $32.000 CLP
+Descuento aplicado: $3.200 CLP
+Impuestos (19 %): $5.472 CLP
+Total a pagar: $34.272 CLP
+Estado: En preparación
+Repartidor asignado: Sin asignar
+Notas: Sin notas
+Notificación local simulada a jose@example.com: pedido PED-001, En preparación. 
+Inventario restante: {Masa=6, Tomate=12, Queso=12, Pepperoni=5}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventar
+rio | 7 Reabastecer | 0 Salir
+Identificador del pedido (por ejemplo PED-001):
+=== Resumen del pedido PED-001 ===
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: +56901234567
+Correo: jose@example.com
+Pizza: Margarita | Precio unitario: $8.000 CLP | Cantidad: 4
+Subtotal solicitado: $32.000 CLP
+Descuento aplicado: $3.200 CLP
+Impuestos (19 %): $5.472 CLP
+Total a pagar: $34.272 CLP
+Estado: Listo
+Repartidor asignado: Sin asignar
+Notas: Sin notas
+Notificación local simulada a jose@example.com: pedido PED-001, Listo.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventar
+rio | 7 Reabastecer | 0 Salir
+Identificador del pedido (por ejemplo PED-001):
+Repartidor: R02 - Diego | Distancia simulada: 500 m | Disponible: false
+=== Resumen del pedido PED-001 ===
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: +56901234567
+Correo: jose@example.com
+Pizza: Margarita | Precio unitario: $8.000 CLP | Cantidad: 4
+Subtotal solicitado: $32.000 CLP
+Descuento aplicado: $3.200 CLP
+Impuestos (19 %): $5.472 CLP
+Total a pagar: $34.272 CLP
+Estado: En camino
+Repartidor asignado: R02 - Diego
+Notas: Sin notas
+Notificación local simulada a jose@example.com: pedido PED-001, En camino.      
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventar
+rio | 7 Reabastecer | 0 Salir
+Identificador del pedido (por ejemplo PED-001):
+=== Resumen del pedido PED-001 ===
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: +56901234567
+Correo: jose@example.com
+Pizza: Margarita | Precio unitario: $8.000 CLP | Cantidad: 4
+Subtotal solicitado: $32.000 CLP
+Descuento aplicado: $3.200 CLP
+Impuestos (19 %): $5.472 CLP
+Total a pagar: $34.272 CLP
+Estado: Entregado
+Repartidor asignado: R02 - Diego
+Notas: Sin notas
+Notificación local simulada a jose@example.com: pedido PED-001, Entregado.      
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventar
+rio | 7 Reabastecer | 0 Salir
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Correo electrónico:
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Q
+Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Q
+Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío o fin de entrada: Margarita):
+Cantidad de pizzas (entero mayor que cero):
+¿Agregar otra pizza al pedido? (s/n):
+Notas opcionales (vacío: Sin notas):
+Disponibilidad confirmada. Puede prepararse el pedido. Inventario actualizado.  
+=== Resumen del pedido PED-002 ===
+Cliente: Ana
+Dirección: Centro
+Teléfono: 12345678
+Correo: ana@example.cl
+Pizza: Pepperoni | Precio unitario: $9.000 CLP | Cantidad: 2
+Subtotal solicitado: $18.000 CLP
+Descuento aplicado: $0 CLP
+Impuestos (19 %): $3.420 CLP
+Total a pagar: $21.420 CLP
+Estado: En preparación
+Repartidor asignado: Sin asignar
+Notas: sin sal
+Notificación local simulada a ana@example.cl: pedido PED-002, En preparación.   
+Inventario restante: {Masa=4, Tomate=8, Queso=8, Pepperoni=3}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventar
+rio | 7 Reabastecer | 0 Salir
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Teléfono inválido o ausente. Se registrará: No informado.
+Correo electrónico:
+Correo inválido o ausente. Se registrará: correo@invalido.com.
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Q
+Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Q
+Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío o fin de entrada: Margarita):
+Cantidad de pizzas (entero mayor que cero):
+Cantidad inválida. Ingrese un entero positivo dentro del rango Int.
+Cantidad de pizzas (entero mayor que cero):
+Cantidad inválida. Ingrese un entero positivo dentro del rango Int.
+Cantidad de pizzas (entero mayor que cero):
+Cantidad inválida. Ingrese un entero positivo dentro del rango Int.
+Cantidad de pizzas (entero mayor que cero):
+¿Agregar otra pizza al pedido? (s/n):
+Notas opcionales (vacío: Sin notas):
+Pedido rechazado: ingredientes insuficientes. El inventario se conserva.        
+Masa: disponible 4, requerido 11. Reabastecer al menos 7 unidades: adquirir el i
+ingrediente, registrar la recepción en Reabastecer y crear un nuevo pedido.      
+Tomate: disponible 8, requerido 22. Reabastecer al menos 14 unidades: adquirir e
+el ingrediente, registrar la recepción en Reabastecer y crear un nuevo pedido.   
+Queso: disponible 8, requerido 22. Reabastecer al menos 14 unidades: adquirir el
+l ingrediente, registrar la recepción en Reabastecer y crear un nuevo pedido.    
+=== Resumen del pedido PED-003 ===
+Cliente: Luis
+Dirección: Centro
+Teléfono: No informado
+Correo: correo@invalido.com
+Pizza: Margarita | Precio unitario: $8.000 CLP | Cantidad: 11
+Subtotal solicitado: $88.000 CLP
+Descuento aplicado: $0 CLP
+Impuestos (19 %): $0 CLP
+Total a pagar: $0 CLP
+Estado: Rechazado por falta de inventario
+Repartidor asignado: Sin asignar
+Notas: Sin notas
+Inventario restante: {Masa=4, Tomate=8, Queso=8, Pepperoni=3}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventar
+rio | 7 Reabastecer | 0 Salir
+Ingrediente (respete el nombre mostrado en inventario):
+Cantidad de unidades recibidas (entero positivo):
+Datos inválidos: Use un ingrediente y una cantidad positiva.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventar
+rio | 7 Reabastecer | 0 Salir
+Identificador del pedido (por ejemplo PED-001):
+Datos inválidos: Transición inválida: Rechazado por falta de inventario → Listo.
+. Marque Listo después de preparar; use el reparto para enviar y entregar.       
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventar
+rio | 7 Reabastecer | 0 Salir
+Inventario (unidades de receta): {Masa=4, Tomate=8, Queso=8, Pepperoni=3}       
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventar
+rio | 7 Reabastecer | 0 Salir
+=== Pedidos del día ===
+PED-001 | José | Margarita x4 | $34.272 CLP | Entregado
+PED-002 | Ana | Pepperoni x2 | $21.420 CLP | En preparación
+PED-003 | Luis | Margarita x11 | $0 CLP | Rechazado por falta de inventario     
+Completados (Entregado): 1 | Pendientes (Registrado, En preparación, Listo, En c
+camino): 1 | Rechazados: 1
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventar
+rio | 7 Reabastecer | 0 Salir
+=== Pedidos del día ===
+PED-001 | José | Margarita x4 | $34.272 CLP | Entregado
+PED-002 | Ana | Pepperoni x2 | $21.420 CLP | En preparación
+PED-003 | Luis | Margarita x11 | $0 CLP | Rechazado por falta de inventario     
+Completados (Entregado): 1 | Pendientes (Registrado, En preparación, Listo, En c
+camino): 1 | Rechazados: 1
+
+BUILD SUCCESSFUL in 16s
+2 actionable tasks: 1 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradl
+le.org/9.6.0/userguide/configuration_cache_enabling.html
+

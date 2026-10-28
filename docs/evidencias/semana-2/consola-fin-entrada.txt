@@ -1,0 +1,36 @@
+=== Pizzería Kotlin | Semana 2 ===
+Impuesto configurable: 0.19 (supuesto académico). Distancias de reparto simuladas desde el local.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Teléfono inválido o ausente. Se registrará: No informado.
+Correo electrónico:
+Correo inválido o ausente. Se registrará: correo@invalido.com.
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío o fin de entrada: Margarita):
+Cantidad de pizzas (entero mayor que cero):
+Fin de entrada. Se utilizará la cantidad predeterminada: 1.
+¿Agregar otra pizza al pedido? (s/n):
+Notas opcionales (vacío: Sin notas):
+Disponibilidad confirmada. Puede prepararse el pedido. Inventario actualizado.
+=== Resumen del pedido PED-001 ===
+Cliente: Cliente sin nombre
+Dirección: Retiro en local
+Teléfono: No informado
+Correo: correo@invalido.com
+Pizza: Margarita | Precio unitario: $8.000 CLP | Cantidad: 1
+Subtotal solicitado: $8.000 CLP
+Descuento aplicado: $0 CLP
+Impuestos (19 %): $1.520 CLP
+Total a pagar: $9.520 CLP
+Estado: En preparación
+Repartidor asignado: Sin asignar
+Notas: Sin notas
+Inventario restante: {Masa=9, Tomate=18, Queso=18, Pepperoni=5}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+=== Pedidos del día ===
+PED-001 | Cliente sin nombre | Margarita x1 | $9.520 CLP | En preparación
+Completados (Entregado): 0 | Pendientes (Registrado, En preparación, Listo, En camino): 1 | Rechazados: 0
+

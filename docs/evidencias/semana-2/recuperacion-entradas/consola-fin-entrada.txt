@@ -1,0 +1,9 @@
+=== Pizzería Kotlin | Semana 2 ===
+Impuesto configurable: 0.19 (supuesto académico). Distancias de reparto simuladas desde el local.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+Nombre del cliente:
+Fin de entrada. Registro del pedido cancelado; no se modificó el inventario.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+=== Pedidos del día ===
+Completados (Entregado): 0 | Pendientes (Registrado, En preparación, Listo, En camino): 0 | Rechazados: 0
+

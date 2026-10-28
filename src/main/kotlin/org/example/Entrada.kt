@@ -10,16 +10,31 @@ fun telefonoValido(entrada: String?): String? {
     return telefono.takeIf { caracteresValidos && cantidadDigitos in 8..15 }
 }
 
-fun convertirCantidad(entrada: String?): Int? = entrada?.trim()?.toIntOrNull()?.takeIf { it > 0 }
+fun correoValido(entrada: String?): String? = entrada?.trim()?.takeIf {
+    it.length <= 254 && it.matches(Regex("[A-Za-z0-9_+%-]+(?:\\.[A-Za-z0-9_+%-]+)*@[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*(?:\\.[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*)*\\.[A-Za-z]{2,}"))
+}
 
-fun leerCantidad(leer: () -> String?, mostrar: (String) -> Unit): Int {
+fun convertirCantidad(entrada: String?): Int? = try {
+    entrada?.trim()?.toInt()?.takeIf { it > 0 }
+} catch (_: NumberFormatException) {
+    null
+}
+
+fun leerProducto(catalogo: List<Producto>, leer: () -> String?, mostrar: (String) -> Unit): Producto? {
+    while (true) {
+        mostrar("Seleccione pizza (vacío: Margarita):")
+        val entrada = leer() ?: return null
+        val seleccion = textoOValorPredeterminado(entrada, "1").toIntOrNull()
+        val producto = seleccion?.takeIf { it in 1..catalogo.size }?.let { catalogo[it - 1] }
+        if (producto != null) return producto
+        mostrar("Pizza inexistente. Seleccione una opción válida.")
+    }
+}
+
+fun leerCantidad(leer: () -> String?, mostrar: (String) -> Unit): Int? {
     while (true) {
         mostrar("Cantidad de pizzas (entero mayor que cero):")
-        val entrada = leer()
-        if (entrada == null) {
-            mostrar("Fin de entrada. Se utilizará la cantidad predeterminada: 1.")
-            return 1
-        }
+        val entrada = leer() ?: return null
         val cantidad = convertirCantidad(entrada)
         if (cantidad != null) return cantidad
         mostrar("Cantidad inválida. Ingrese un entero positivo dentro del rango Int.")

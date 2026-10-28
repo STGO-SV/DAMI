@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.PedidoTest" tests="45" skipped="0" failures="0" errors="0" timestamp="2026-10-28T16:53:38.733Z" hostname="LAPTOP-LAL7LJG6" time="0.338">
+  <properties/>
+  <testcase name="listoYEnCaminoPermanecenPendientes()" classname="org.example.PedidoTest" time="0.08"/>
+  <testcase name="ingredienteAusenteSeConsideraCero()" classname="org.example.PedidoTest" time="0.002"/>
+  <testcase name="faltaSoloUnIngredienteEvitaConsumoParcial()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="stockSuperiorSeDescuenta()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="filtrosYReporteConArregloIncluyenTodosLosPedidos()" classname="org.example.PedidoTest" time="0.026"/>
+  <testcase name="unaPizzaSinDescuento()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="transicionesInvalidasNoAlteranEstado()" classname="org.example.PedidoTest" time="0.023"/>
+  <testcase name="cantidadesInvalidasSeRechazanConTryCatch()" classname="org.example.PedidoTest" time="0.003"/>
+  <testcase name="cuatroPizzasConDiezPorCiento()" classname="org.example.PedidoTest" time="0.002"/>
+  <testcase name="leerCantidadRepreguntaYFinDeEntradaUsaUno()" classname="org.example.PedidoTest" time="0.005"/>
+  <testcase name="tasaCeroConservaTotalesSemanaUno()" classname="org.example.PedidoTest" time="0.002"/>
+  <testcase name="consolaProductoInvalidoNoRegistraPedido()" classname="org.example.PedidoTest" time="0.012"/>
+  <testcase name="redondeoTruncaDescuentoYRedondeaImpuestoAlPeso()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="cincoPizzasConDiezPorCiento()" classname="org.example.PedidoTest" time="0.0"/>
+  <testcase name="telefonoConservaPrefijoYCeros()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="calculoDeIngredientesParaLoteMixto()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="encapsulacionCopiaRecetasInventarioPedidosYLineas()" classname="org.example.PedidoTest" time="0.003"/>
+  <testcase name="entregaLiberaRepartidorYCompletaPedido()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="seEligeRealmenteMenorDistanciaDisponible()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="stockInsuficienteConservaTodoSinCobroNiReparto()" classname="org.example.PedidoTest" time="0.012"/>
+  <testcase name="desbordamientoSeDetectaAntesDeConsumir()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="entradaNulaTerminaSinExcepcionYAltaIncompletaTienePredeterminados()" classname="org.example.PedidoTest" time="0.007"/>
+  <testcase name="correoValidaFormatoBasico()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="stockExactoConfirmaYAgotaInventario()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="resumenCompletoIncluyeDatosImportesYEstado()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="notasNulasVaciasYConContenido()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="consolaRechazoYEntradasInvalidasConservanInventario()" classname="org.example.PedidoTest" time="0.014"/>
+  <testcase name="variosPedidosCompartenInventarioEIdentificadoresUnicos()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="reabastecerPermiteNuevoPedidoSinRevivirRechazado()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="letNotificaSoloConCorreoValido()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="telefonosInvalidosSeDetectan()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="rechazadoNoPuedePrepararseEnviarseNiEntregarse()" classname="org.example.PedidoTest" time="0.002"/>
+  <testcase name="importesMixtosAcumulanCantidadesParaDescuento()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="tresPizzasSinDescuento()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="empateDeDistanciaConservaOrdenDeLista()" classname="org.example.PedidoTest" time="0.0"/>
+  <testcase name="dineroGrandeNoDesbordaInt()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="textosVaciosYNulosUsanPredeterminado()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="consolaVariosPedidosYEntregaEnUnaSesion()" classname="org.example.PedidoTest" time="0.009"/>
+  <testcase name="tasasInvalidasSeRechazan()" classname="org.example.PedidoTest" time="0.002"/>
+  <testcase name="procesamientoRechazaParametrosInvalidos()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="sinRepartidoresPermaneceListo()" classname="org.example.PedidoTest" time="0.0"/>
+  <testcase name="consolaErroresNoTerminaYPermiteReabastecer()" classname="org.example.PedidoTest" time="0.002"/>
+  <testcase name="inventarioInvalidoSeRechazaSinCambios()" classname="org.example.PedidoTest" time="0.002"/>
+  <testcase name="herenciaYPolimorfismoDescribenRoles()" classname="org.example.PedidoTest" time="0.001"/>
+  <testcase name="stockCeroRechaza()" classname="org.example.PedidoTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

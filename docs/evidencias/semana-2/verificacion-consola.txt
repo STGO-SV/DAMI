@@ -1,0 +1,5 @@
+CORRECTO: consola-lote-mixto | código 0 | 8 comprobaciones
+CORRECTO: consola-reabastecimiento | código 0 | 6 comprobaciones
+CORRECTO: consola-fin-entrada | código 0 | 6 comprobaciones
+CORRECTO: consola-tasa-cero | código 0 | 2 comprobaciones
+CORRECTO: consola-tasa-invalida | código 0 | 1 comprobaciones

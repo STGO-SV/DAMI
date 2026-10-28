@@ -1,0 +1,90 @@
+=== Pizzería Kotlin | Semana 2 ===
+Impuesto configurable: 0.19 (supuesto académico). Distancias de reparto simuladas desde el local.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Correo electrónico:
+Correo inválido o ausente. Se registrará: correo@invalido.com.
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío: Margarita):
+Pizza Margarita seleccionada.
+Cantidad de pizzas (entero mayor que cero):
+¿Agregar otra pizza al pedido? (s/n):
+Notas opcionales (vacío: Sin notas):
+Pedido rechazado: ingredientes insuficientes. El inventario se conserva.
+Masa: disponible 10, requerido 11. Reabastecer al menos 1 unidades: adquirir el ingrediente, registrar la recepción en Reabastecer y crear un nuevo pedido.
+Tomate: disponible 20, requerido 22. Reabastecer al menos 2 unidades: adquirir el ingrediente, registrar la recepción en Reabastecer y crear un nuevo pedido.
+Queso: disponible 20, requerido 22. Reabastecer al menos 2 unidades: adquirir el ingrediente, registrar la recepción en Reabastecer y crear un nuevo pedido.
+=== Resumen del pedido PED-001 ===
+Cliente: Ana
+Dirección: Centro
+Teléfono: 12345678
+Correo: correo@invalido.com
+Pizza: Margarita | Precio unitario: $8.000 CLP | Cantidad: 11
+Subtotal solicitado: $88.000 CLP
+Descuento aplicado: $0 CLP
+Impuestos (19 %): $0 CLP
+Total a pagar: $0 CLP
+Estado: Rechazado por falta de inventario
+Repartidor asignado: Sin asignar
+Notas: Sin notas
+Inventario restante: {Masa=10, Tomate=20, Queso=20, Pepperoni=5}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+Ingrediente (respete el nombre mostrado en inventario):
+Cantidad de unidades recibidas (entero positivo):
+Datos inválidos: Use un ingrediente y una cantidad positiva.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+Ingrediente (respete el nombre mostrado en inventario):
+Cantidad de unidades recibidas (entero positivo):
+Inventario actualizado: {Masa=11, Tomate=20, Queso=20, Pepperoni=5}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+Ingrediente (respete el nombre mostrado en inventario):
+Cantidad de unidades recibidas (entero positivo):
+Inventario actualizado: {Masa=11, Tomate=22, Queso=20, Pepperoni=5}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+Ingrediente (respete el nombre mostrado en inventario):
+Cantidad de unidades recibidas (entero positivo):
+Inventario actualizado: {Masa=11, Tomate=22, Queso=22, Pepperoni=5}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Correo electrónico:
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío: Margarita):
+Pizza Margarita seleccionada.
+Cantidad de pizzas (entero mayor que cero):
+¿Agregar otra pizza al pedido? (s/n):
+Notas opcionales (vacío: Sin notas):
+Disponibilidad confirmada. Puede prepararse el pedido. Inventario actualizado.
+=== Resumen del pedido PED-002 ===
+Cliente: Ana
+Dirección: Centro
+Teléfono: 12345678
+Correo: ana@example.cl
+Pizza: Margarita | Precio unitario: $8.000 CLP | Cantidad: 11
+Subtotal solicitado: $88.000 CLP
+Descuento aplicado: $8.800 CLP
+Impuestos (19 %): $15.048 CLP
+Total a pagar: $94.248 CLP
+Estado: En preparación
+Repartidor asignado: Sin asignar
+Notas: Sin notas
+Notificación local simulada a ana@example.cl: pedido PED-002, En preparación.
+Inventario restante: {Masa=0, Tomate=0, Queso=0, Pepperoni=5}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+=== Pedidos del día ===
+PED-001 | Ana | Margarita x11 | $0 CLP | Rechazado por falta de inventario
+PED-002 | Ana | Margarita x11 | $94.248 CLP | En preparación
+Completados (Entregado): 0 | Pendientes (Registrado, En preparación, Listo, En camino): 1 | Rechazados: 1
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+Inventario (unidades de receta): {Masa=0, Tomate=0, Queso=0, Pepperoni=5}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir
+=== Pedidos del día ===
+PED-001 | Ana | Margarita x11 | $0 CLP | Rechazado por falta de inventario
+PED-002 | Ana | Margarita x11 | $94.248 CLP | En preparación
+Completados (Entregado): 0 | Pendientes (Registrado, En preparación, Listo, En camino): 1 | Rechazados: 1
+
