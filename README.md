@@ -65,6 +65,7 @@ El fin de entrada (`null`/EOF) en cualquier campo del alta cancela el pedido en 
 - [Informe y trazabilidad](docs/informe-semana-2.md).
 - [Estado técnico y resultados](docs/estado-final-semana-2.md).
 - [Comprobaciones manuales](docs/pruebas-manuales-semana-2.md).
+- [Revisión de retroalimentación de Semana 1: trazabilidad y 65 pruebas aprobadas](docs/retroalimentacion-semana-1.md).
 - Evidencias de Semana 2: `docs/evidencias/semana-2/`.
 - Historial: `docs/informe-semana-1.md`, `docs/estado-final-semana-1.md` y evidencias anteriores conservadas.
 

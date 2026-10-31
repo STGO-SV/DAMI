@@ -93,17 +93,29 @@ class Pedido(
         val importes = calcularImportes()
         return buildString {
             appendLine("=== Resumen del pedido $idPedido ===")
+            appendLine("--- Identificación del pedido ---")
+            appendLine("Identificador: $idPedido")
+            appendLine()
+            appendLine("--- Datos del cliente ---")
             appendLine(cliente.describirUsuario())
+            appendLine()
+            appendLine("--- Productos y cantidades ---")
             for (linea in lineas) {
-                appendLine("Pizza: ${linea.producto.nombre} | Precio unitario: ${pesos(linea.producto.precio)} | Cantidad: ${linea.cantidad}")
+                appendLine("Pizza: ${linea.producto.nombre}")
+                appendLine("  Precio unitario: ${pesos(linea.producto.precio)} | Cantidad: ${linea.cantidad}")
             }
+            appendLine("Cantidad total de pizzas: $cantidadPizzas")
+            appendLine("Notas: ${notas ?: "Sin notas"}")
+            appendLine()
+            appendLine("--- Detalle monetario ---")
             appendLine("Subtotal solicitado: ${pesos(importes.subtotal)}")
             appendLine("Descuento aplicado: ${pesos(importes.descuento)}")
             appendLine("Impuestos (${tasaImpuesto.multiply(BigDecimal(100)).stripTrailingZeros().toPlainString()} %): ${pesos(importes.impuesto)}")
             appendLine("Total a pagar: ${pesos(importes.total)}")
+            appendLine()
+            appendLine("--- Estado y asignación de reparto ---")
             appendLine("Estado: ${estado.descripcion}")
-            appendLine("Repartidor asignado: ${repartidor?.nombre ?: "Sin asignar"}")
-            append("Notas: ${notas?.trim() ?: "Sin notas"}")
+            append("Repartidor asignado: ${repartidor?.nombre ?: "Sin asignar"}")
         }
     }
 }

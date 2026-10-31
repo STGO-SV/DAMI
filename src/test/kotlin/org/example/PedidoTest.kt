@@ -22,8 +22,11 @@ class PedidoTest {
     @Test fun cincoPizzasConDiezPorCiento() {
         assertEquals(42840L, registrar(cantidad = 5).calcularImportes().total)
     }
+    @Test fun ochoPizzasDescuentanSobreTodoElSubtotal() {
+        assertEquals(Importes(64000, 6400, 10944, 68544), registrar(cantidad = 8).calcularImportes())
+    }
     @Test fun tasaCeroConservaTotalesSemanaUno() {
-        for ((cantidad, total) in listOf(1 to 8000L, 3 to 24000L, 4 to 28800L, 5 to 36000L)) {
+        for ((cantidad, total) in listOf(1 to 8000L, 3 to 24000L, 4 to 28800L, 5 to 36000L, 8 to 57600L)) {
             assertEquals(total, registrar(Jornada(tasaImpuesto = BigDecimal.ZERO), cantidad).calcularImportes().total)
         }
     }
