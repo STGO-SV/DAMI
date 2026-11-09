@@ -22,6 +22,15 @@ class Inventario(inicial: Map<String, Long>) {
     init { require(existencias.all { (nombre, cantidad) -> nombre.isNotBlank() && cantidad >= 0 }) }
     fun consultar(): Map<String, Long> = existencias.toMap()
 
+    fun capacidad(producto: Producto, borrador: List<LineaPedido>): Int {
+        val comprometidos = if (borrador.isEmpty()) emptyMap() else calcularIngredientes(borrador)
+        val maximoPorReceta = producto.ingredientes.entries.minOf { (ingrediente, consumo) ->
+            val restante = (existencias[ingrediente] ?: 0L) - (comprometidos[ingrediente] ?: 0L)
+            restante.coerceAtLeast(0L) / consumo
+        }
+        return minOf(maximoPorReceta, rangoCantidadPizzas.last.toLong()).toInt()
+    }
+
     fun consumir(necesarios: Map<String, Long>): List<Faltante> {
         require(necesarios.isNotEmpty() && necesarios.all { (nombre, cantidad) -> nombre.isNotBlank() && cantidad > 0 })
         val faltantes = necesarios.mapNotNull { (ingrediente, requerido) ->

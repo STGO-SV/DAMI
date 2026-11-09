@@ -41,3 +41,12 @@ Desktop.ini
 *.tmp
 *.bak
 *~
+.cache/
+
+# Paquetes de entrega y salidas generadas en la raíz
+*.zip
+*.zip.*
+/consola-*.txt
+/verificacion-consola.txt
+/resultados-pruebas.txt
+/TEST-*.xml

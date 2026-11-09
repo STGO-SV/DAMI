@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.UsabilidadSemana3Test" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-11-07T18:52:43.082Z" hostname="equipo-local" time="0.017">
+  <properties/>
+  <testcase name="normalizaMovilesNacionalesYConCodigoDePais()" classname="org.example.UsabilidadSemana3Test" time="0.001"/>
+  <testcase name="cancelarORecibirEofTrasAgotarStockConservaElInventario()" classname="org.example.UsabilidadSemana3Test" time="0.003"/>
+  <testcase name="resumenMuestraTelefonoChilenoSinAvisoDeFormato()" classname="org.example.UsabilidadSemana3Test" time="0.001"/>
+  <testcase name="rechazaPrefijosMalFormadosLongitudesIncorrectasYLetras()" classname="org.example.UsabilidadSemana3Test" time="0.001"/>
+  <testcase name="aceptaCienEnConsolaSiLaRecetaTieneStockSuficiente()" classname="org.example.UsabilidadSemana3Test" time="0.001"/>
+  <testcase name="pedidoMixtoRepiteCantidadYAdmiteElMaximoConLasLineasPrevias()" classname="org.example.UsabilidadSemana3Test" time="0.001"/>
+  <testcase name="normalizaFijosYConservaTodosLosDigitosNacionales()" classname="org.example.UsabilidadSemana3Test" time="0.001"/>
+  <testcase name="capacidadesInicialesUsanTodosLosIngredientes()" classname="org.example.UsabilidadSemana3Test" time="0.001"/>
+  <testcase name="capacidadRestaLineasMixtasYRepetidasSinConsumir()" classname="org.example.UsabilidadSemana3Test" time="0.001"/>
+  <testcase name="capacidadRecalculaTrasReabastecerYAplicaLimiteSinDesbordar()" classname="org.example.UsabilidadSemana3Test" time="0.001"/>
+  <testcase name="variedadAgotadaPermiteElegirOtraSinPedirCantidadImposible()" classname="org.example.UsabilidadSemana3Test" time="0.001"/>
+  <testcase name="laConfirmacionFinalRechazaAtomicamenteSiCambiaElStockTrasSeleccionar()" classname="org.example.UsabilidadSemana3Test" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

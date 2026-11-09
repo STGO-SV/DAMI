@@ -1,0 +1,15 @@
+﻿=== Pizzería Kotlin | Semana 3 ===
+Impuesto configurable: 0.19 (supuesto académico). Distancias de reparto simuladas desde el local.
+Fecha de pedidos: 2026-11-03 | Promoción: Sin promoción por fechas
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Teléfono válido conservado: no es representable como +XX (XXX) XXX-XXXX sin alterar dígitos.
+Correo electrónico:
+Correo inválido. Ingrese nombre@dominio.com; el correo es obligatorio.
+Correo electrónico:
+Fin de entrada. Registro del pedido cancelado; no se modificó el inventario.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+=== Pedidos del día ===
+Completados (Entregado): 0 | Pendientes (Registrado, En preparación, Listo, En camino): 0 | Rechazados: 0

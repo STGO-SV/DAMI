@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.IntegracionSemana3Test" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-07T18:52:42.331Z" hostname="equipo-local" time="0.581">
+  <properties/>
+  <testcase name="configuracionPermiteDemostrarFechasYTasasSinEditarFuentes()" classname="org.example.IntegracionSemana3Test" time="0.008"/>
+  <testcase name="reflectionListaMiembrosRealesOrdenadosSinAccesoAEstadoPrivado()" classname="org.example.IntegracionSemana3Test" time="0.552"/>
+  <testcase name="anotacionTieneMetadatosRuntimeEnLasDosPizzasDelCatalogo()" classname="org.example.IntegracionSemana3Test" time="0.001"/>
+  <testcase name="demostracionIntegraUtilidadesYNoModificaJornadaPrevia()" classname="org.example.IntegracionSemana3Test" time="0.014"/>
+  <testcase name="configuracionInvalidaNoIniciaUnaJornada()" classname="org.example.IntegracionSemana3Test" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

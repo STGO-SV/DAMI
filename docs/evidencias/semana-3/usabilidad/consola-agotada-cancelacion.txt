@@ -1,0 +1,33 @@
+﻿=== Pizzería Kotlin | Semana 3 ===
+Impuesto configurable: 0.19 (supuesto académico). Distancias de reparto simuladas desde el local.
+Fecha de pedidos: 2026-11-03 | Promoción: Sin promoción por fechas
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Correo electrónico:
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío: Margarita):
+Ingrese C para cancelar el pedido.
+Pizza Pepperoni seleccionada.
+Unidades disponibles para este pedido: 5
+¿Cuántas pizzas Pepperoni desea pedir?
+¿Agregar otra pizza al pedido? (S/N):
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío: Margarita):
+Ingrese C para cancelar el pedido.
+Pizza Pepperoni seleccionada.
+Unidades disponibles para este pedido: 0
+Pepperoni está agotada para este pedido. Seleccione otra variedad o ingrese C para cancelar.
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío: Margarita):
+Ingrese C para cancelar el pedido.
+Registro del pedido cancelado. El inventario se conserva.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+Inventario (unidades de receta): {Masa=10, Tomate=20, Queso=20, Pepperoni=5}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+=== Pedidos del día ===
+Completados (Entregado): 0 | Pendientes (Registrado, En preparación, Listo, En camino): 0 | Rechazados: 0

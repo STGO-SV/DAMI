@@ -1,12 +1,12 @@
 # Pizzería Kotlin
 
-PMY2201 — Desarrollo de Aplicaciones Móviles I, Experiencia 1, Semana 2. Actividad «Aplicando utilidades de Kotlin».
+PMY2201 — Desarrollo de Aplicaciones Móviles I, Experiencia 1, Semana 3, Forma B. Actividad «Creando soluciones con Kotlin».
 
-Aplicación de consola que registra clientes y varios pedidos por sesión, controla ingredientes individuales y coordina la preparación y el reparto. Evoluciona la entrega de Semana 1 con clases, funciones, arreglos, colecciones y manejo seguro de entradas.
+Aplicación de consola que registra clientes y varios pedidos por sesión, controla ingredientes individuales y coordina la preparación y el reparto. Integra Regex, rangos, promociones por fechas, anotaciones, reflexión, operadores, desestructuración y prevención de duplicados, conservando el flujo de las semanas anteriores.
 
 ## Entorno y ejecución
 
-Kotlin/JVM 2.2.20, Amazon Corretto JDK 21, Gradle Wrapper 9.6.0 y Gradle Kotlin DSL. JUnit 5 y kotlin-test se utilizan exclusivamente en pruebas. Se necesita acceso a Internet para la primera descarga de Gradle y dependencias si no están en caché.
+Kotlin/JVM 2.2.20, Amazon Corretto JDK 21 y Gradle Wrapper 9.6.0. Se necesita acceso a Internet para la primera descarga de Gradle y dependencias cuando no están en caché.
 
 Desde la carpeta del proyecto en PowerShell:
 
@@ -20,7 +20,7 @@ Desde la carpeta del proyecto en PowerShell:
 
 La terminal debe recibir y mostrar UTF-8 para conservar acentos en los datos ingresados. Las dos primeras líneas configuran la sesión actual de PowerShell. En IntelliJ se utiliza codificación UTF-8 para el proyecto y la consola.
 
-En IntelliJ IDEA se abre esta carpeta como proyecto Gradle y se selecciona Amazon Corretto 21. Se ejecuta `org.example.MainKt` o la tarea `run`. La configuración Gradle selecciona explícitamente JDK 21 del proveedor Amazon. Las tareas de ejecución incorporan UTF-8. Al ejecutar directamente en el IDE se agregan las opciones JVM `-Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8`.
+En IntelliJ IDEA se abre esta carpeta como proyecto Gradle y se selecciona Amazon Corretto 21. Se ejecuta `org.example.MainKt` o la tarea `run`. En una configuración directa de `MainKt`, se colocan los argumentos en **Program arguments** y las opciones `-Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8` en **VM options**. La tarea Gradle `run` configura UTF-8 y conecta la entrada estándar.
 
 La tasa de impuesto es un **supuesto académico configurable**. El valor predeterminado `0.19` representa un ejemplo de IVA chileno; el enunciado no prescribe una tasa. Puede cambiarse sin editar código:
 
@@ -30,6 +30,16 @@ La tasa de impuesto es un **supuesto académico configurable**. El valor predete
 ```
 
 Se admite un decimal entre 0 y 1. Para ejecutar `MainKt` directamente se pasa ese decimal como argumento del programa.
+
+La opción 8 del menú ejecuta la demostración integrada. Los ejemplos siguientes muestran la invocación directa y dos fechas para comprobar la misma promoción.
+
+```powershell
+.\gradlew.bat --console=plain run --args="--demo"
+.\gradlew.bat --console=plain run --args="--fecha=2026-11-03 --promocion=2026-11-01,2026-11-07,0.15"
+.\gradlew.bat --console=plain run --args="--fecha=2026-11-08 --promocion=2026-11-01,2026-11-07,0.15"
+```
+
+`--fecha=AAAA-MM-DD` fija la fecha de los pedidos. El valor predeterminado corresponde a la fecha de la zona `America/Santiago`. `--promocion=inicio,fin,fracción` configura una promoción con extremos inclusivos y fracción de 0 a 1. La promoción por fechas es opcional. La configuración se valida antes de abrir el menú. `--demo` ejecuta la demostración con sus propios datos fijos.
 
 ## Operación
 
@@ -43,7 +53,7 @@ Se asigna el repartidor disponible más cercano entre distancias precargadas des
 
 ## Cálculos y validación
 
-El dinero se representa en pesos enteros con `Long`. Se calcula subtotal, se descuenta el 10 % si la suma de pizzas supera tres, y sobre la base descontada se calcula el impuesto con `BigDecimal`. El descuento conserva la política de Semana 1: truncamiento hacia abajo al peso. El impuesto se redondea al peso con `HALF_UP`. El total es subtotal menos descuento más impuesto. Las operaciones detectan desbordamientos antes de consumir inventario.
+El dinero se representa en pesos enteros con `Long`. Se calcula el subtotal y se compara el descuento del 10 % por más de tres unidades con el descuento por fechas sobre el subtotal de productos anotados con `@Promocionable`. Se aplica el mayor, sin acumularlos; en empate se conserva el descuento por cantidad. Ambos descuentos truncan hacia abajo al peso. El impuesto usa `BigDecimal` y `HALF_UP` sobre subtotal menos descuento. El total es subtotal menos descuento más impuesto. Las operaciones detectan desbordamientos antes de consumir inventario. Sin promoción configurada se conservan los cálculos históricos:
 
 | Margarita | Subtotal | Descuento | Impuesto 19 % | Total |
 | --- | ---: | ---: | ---: | ---: |
@@ -51,36 +61,43 @@ El dinero se representa en pesos enteros con `Long`. Se calcula subtotal, se des
 | 3 | $24.000 | $0 | $4.560 | $28.560 |
 | 4 | $32.000 | $3.200 | $5.472 | $34.272 |
 | 5 | $40.000 | $4.000 | $6.840 | $42.840 |
+| 8 | $64.000 | $6.400 | $10.944 | $68.544 |
 
-La validación telefónica de Semana 1 conserva prefijos y ceros: admite `+` inicial y separadores, con 8 a 15 dígitos ASCII. El correo utiliza una validación sintáctica básica con usuario, dominio y extensión. No se comprueba la existencia real de los contactos. Los inválidos usan `No informado` y `correo@invalido.com`. Nombre y dirección vacíos usan `Cliente sin nombre` y `Retiro en local`.
+El resumen presenta teléfonos chilenos como `(+56) X XXXX XXXX`. Se puede ingresar el número nacional de nueve dígitos o incluir `+56`. Las entradas internacionales compatibles de 12 dígitos se presentan como `+XX (XXX) XXX-XXXX`. Las demás entradas genéricas válidas conservan su presentación. La validación es sintáctica y un teléfono inválido se muestra como `No informado`.
 
-Las selecciones de pizza inválidas vuelven a solicitarse sin descartar los datos del cliente ni los productos ya incorporados. Las cantidades cero, negativas, no numéricas o fuera del rango `Int` repiten únicamente la pregunta de cantidad. Una selección de pizza vacía utiliza Margarita; las cantidades vacías se consideran inválidas porque no tienen valor predeterminado.
+El correo es obligatorio en consola: los valores inválidos o vacíos repiten únicamente ese campo. La Regex académica admite usuario ASCII con letras, dígitos y `_+%-`, puntos separados por segmentos no vacíos, dominio con etiquetas alfanuméricas y guiones interiores, y extensión alfabética de al menos dos caracteres. Se recortan espacios exteriores; se rechazan espacios internos y formatos mal formados. No se verifica la existencia real del contacto. Para objetos construidos directamente sin correo se conserva el marcador histórico `correo@invalido.com`, sin notificación. Nombre y dirección vacíos usan `Cliente sin nombre` y `Retiro en local`.
 
-El fin de entrada (`null`/EOF) en cualquier campo del alta cancela el pedido en curso sin registrarlo ni modificar inventario o reparto. No equivale a enviar una línea vacía: los predeterminados de cliente, contactos, pizza y notas siguen aplicándose a líneas vacías. El menú termina al recibir fin de entrada. Las notas nulas o vacías muestran `Sin notas`. Un correo válido habilita un mensaje local de notificación mediante `let`; no se envían comunicaciones externas. Los errores previsibles de entrada y las transiciones inválidas se informan sin cerrar la sesión.
+La dirección de entrega se recibe como texto libre. No se comprueba su existencia, estructura postal ni ubicación geográfica. La asignación de repartidores utiliza distancias simuladas independientes de la dirección ingresada.
 
-## Diseño y documentación
+Una selección de pizza vacía utiliza Margarita. Al seleccionar la variedad se muestra el máximo según su receta y los ingredientes comprometidos en el borrador, con tope de 100 por línea. Una cantidad inválida o superior al máximo repite solo ese campo. Si la variedad se agota, se vuelve a la selección y se puede elegir otra o ingresar `C` para cancelar. El inventario real se comprueba y descuenta al registrar el pedido. El rango `1..100` se aplica a las cantidades ingresadas en consola.
 
-`Producto` encapsula su receta; `Pedido` conserva líneas e importes y controla estados; `Usuario` comparte contacto entre `Cliente` y `Repartidor`. El resumen usa el comportamiento sobrescrito de Cliente y el menú muestra el de Repartidor. `Inventario` protege un `MutableMap`; `Jornada` conserva un `Array<Pedido>`, informa con `for` y agrupa con `filter`. `Entrada.kt` mantiene las validaciones separadas de la consola.
+La pregunta de agregar otra pizza acepta `S`, `s`, `N` o `n` y recorta los espacios exteriores. Ante otra entrada se repite la pregunta y se conservan el cliente y las líneas del borrador.
 
-- [Informe y trazabilidad](docs/informe-semana-2.md).
-- [Estado técnico y resultados](docs/estado-final-semana-2.md).
-- [Comprobaciones manuales](docs/pruebas-manuales-semana-2.md).
+EOF cancela el borrador en cualquier campo del alta y finaliza la sesión. El registro y el consumo de ingredientes ocurren después de completar el alta. Una línea vacía activa los valores predeterminados de nombre, dirección, teléfono, pizza y notas, o repite la pregunta de correo, cantidad o S/N. Un correo válido habilita una notificación local simulada.
+
+## Utilidades avanzadas
+
+`Margarita` y `Pepperoni` especializan `Producto` y llevan `@Promocionable`, con objetivo CLASS y retención RUNTIME. La promoción consulta la anotación mediante reflexión, sin banderas de elegibilidad. La inspección ordena propiedades públicas y métodos públicos, incluidos los heredados del dominio; excluye el estado privado y los métodos heredados directamente de `Any`. La demostración inspecciona las dos pizzas, `Producto` y `Pedido`.
+
+La igualdad de Cliente utiliza nombre y correo; la de Producto utiliza nombre y categoría. Las claves recortan extremos, unifican espacios y convierten a minúsculas con `Locale.ROOT`. `equals()` y `hashCode()` mantienen el mismo criterio. Precio, receta, dirección y teléfono no forman parte de esas identidades. El registro conserva la primera ficha; cada pedido conserva su contacto ingresado. Una ficha de producto con la misma identidad pero distinto precio, receta o elegibilidad se rechaza antes de consumir inventario. El catálogo operativo sigue conteniendo solo Margarita y Pepperoni.
+
+`Pedido + Pedido` combina borradores distintos en estado Registrado del mismo cliente, contacto de entrega, fecha, tasa y promoción. Agrupa productos iguales, comprueba fichas compatibles y recalcula importes desde las líneas. Conserva notas distintas en orden y produce `SIM(idA+idB)`, con estado Registrado y sin repartidor. El resultado es una cotización marcada como simulación, que no se registra en la jornada ni consume inventario. Los pedidos operativos y rechazados no pueden combinarse. La demostración utiliza `+`, `==` y la desestructuración explícita de Cliente (nombre, correo, teléfono) y Pedido (cliente, líneas copiadas, total).
+
+## Documentación y verificación
+
+- [Informe y trazabilidad de Semana 3](docs/informe-semana-3.md).
+- [Estado técnico y resultados automatizados de Semana 3](docs/estado-final-semana-3.md#verificación-automatizada).
+- [Siete grupos aprobados en la auditoría manual independiente](docs/estado-final-semana-3.md#auditoría-manual-independiente).
+- [Comprobaciones manuales en IntelliJ](docs/pruebas-manuales-semana-3.md).
 - [Revisión de retroalimentación de Semana 1: trazabilidad y 65 pruebas aprobadas](docs/retroalimentacion-semana-1.md).
-- Evidencias de Semana 2: `docs/evidencias/semana-2/`.
-- Historial: `docs/informe-semana-1.md`, `docs/estado-final-semana-1.md` y evidencias anteriores conservadas.
+- [Corrección de respuestas S/N tras retroalimentación de Semana 2](docs/retroalimentacion-semana-2.md).
+- [Usabilidad y auditoría de promociones de Semana 3](docs/mejoras-usabilidad-semana-3.md).
+- [Evidencias automatizadas de la versión local](docs/evidencias/semana-3/usabilidad/).
 
-Las pruebas de Semana 1 se adaptan a las clases, al nuevo impuesto y al flujo de estados, manteniendo cobertura de los límites de cantidad, validaciones, rechazo, redondeo, importes grandes y resúmenes. Con tasa cero se verifican los totales históricos.
-
-La revisión de recuperación de entradas aprobó 57 pruebas: 45 casos existentes adaptados al tratamiento de EOF y 12 casos nuevos sobre reintentos, conservación del cliente y productos, rangos numéricos, líneas vacías y cancelación sin efectos parciales. `test` y `clean build` finalizaron correctamente. Las evidencias actuales están en `docs/evidencias/semana-2/recuperacion-entradas/`.
+El 7 de noviembre de 2026 se registraron 124 pruebas aprobadas, 23 escenarios de consola y 185 comprobaciones de salida, con compilación limpia satisfactoria. La auditoría manual se realizó en distintas etapas. [Repetición automatizada](docs/pruebas-manuales-semana-3.md#10-repetición-de-la-verificación-automatizada).
 
 ## Entrega y alcance
 
-El ZIP se genera fuera del repositorio y conserva el Wrapper completo. Se puede generar nuevamente con el siguiente comando:
+El paquete de entrega `PMY2201_Exp1_S3_FormaB_pizzeria-kotlin.zip` se generó el 8 de noviembre de 2026 con 182 entradas. Incluye las fuentes, las evidencias y la documentación consolidada, con las precisiones sobre EOF y dirección de entrega. La compilación y las comprobaciones se ejecutaron desde una extracción independiente. El archivo `.zip.sha256` y los registros de validación se consultan junto al ZIP. [Estado del paquete](docs/estado-final-semana-3.md#estado-del-paquete).
 
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Preparar-Entrega-Semana2.ps1
-```
-
-El resultado es `PMY2201_Exp1_S2_pizzeria-kotlin.zip` en la carpeta superior, acompañado por su SHA-256 y validación de contenido. Excluye Git, cachés, compilaciones y configuración local de IDE. El ZIP de Semana 1 se conserva; el script histórico corresponde exclusivamente a aquella entrega.
-
-Los datos viven en memoria y se reinician por ejecución. No hay persistencia, interfaz Android, pagos reales, geolocalización ni servicios externos. La simulación de distancias no depende de la dirección del cliente. Las unidades de ingredientes y los impuestos son parámetros didácticos, no un sistema comercial de facturación.
+Los datos viven en memoria y se reinician por ejecución. No hay persistencia, interfaz Android, pagos reales, geolocalización ni servicios externos. Las unidades de ingredientes y los impuestos son parámetros didácticos, no un sistema comercial de facturación.

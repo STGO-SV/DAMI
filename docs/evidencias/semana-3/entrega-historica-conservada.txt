@@ -1,0 +1,4 @@
+
+Algorithm : SHA256
+Hash      : 37FD2B4DF2995AC3D2C411703CB4DB1D4CAD78416087DA70E5DB028924B08A95
+Path      : C:\Dev\Duoc\DAMI\[nombre local del ZIP omitido]

@@ -1,0 +1,1 @@
+﻿Configuración inválida. Use impuesto 0..1, --fecha=AAAA-MM-DD y --promocion=inicio,fin,porcentaje (0..1).

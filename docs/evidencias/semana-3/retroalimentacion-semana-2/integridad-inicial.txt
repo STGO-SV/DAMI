@@ -1,0 +1,32 @@
+
+Algorithm : SHA256
+Hash      : 264956930F988A1BA10211EEAB565882F5FB9886D80EB86435333ABDF83ECFE8
+Path      : C:\Dev\Duoc\DAMI\pizzeria-kotlin\src\main\kotlin\org\example\Pedido.kt
+
+Algorithm : SHA256
+Hash      : C900E27C29E3C5F0184F7A247E42FDD5980E7EF3DEAEF2564A0A3DDFC0EDD385
+Path      : C:\Dev\Duoc\DAMI\pizzeria-kotlin\src\main\kotlin\org\example\Jornada.kt
+
+Algorithm : SHA256
+Hash      : 2747943FBDC08838A4AA8D342F36045AA99DE0FF58181E01936C2C53065F2EF3
+Path      : C:\Dev\Duoc\DAMI\pizzeria-kotlin\src\main\kotlin\org\example\Inventario.kt
+
+Algorithm : SHA256
+Hash      : A781CAF310C8CC9CDBD5410C6D3210920BA9C42EA19615AE29EBB919FCCCE6D3
+Path      : C:\Dev\Duoc\DAMI\pizzeria-kotlin\src\main\kotlin\org\example\Usuario.kt
+
+Algorithm : SHA256
+Hash      : 42E9E62F27A9753EC2F834A506967A74C88120B5598333222E87F8DE34FBC0B1
+Path      : C:\Dev\Duoc\DAMI\pizzeria-kotlin\src\main\kotlin\org\example\Producto.kt
+
+Algorithm : SHA256
+Hash      : BF23B891339B9E23BA0EAC4D76D9C993BB10ACF59609882A7449DBF454105C64
+Path      : C:\Dev\Duoc\DAMI\pizzeria-kotlin\src\main\kotlin\org\example\Promocion.kt
+
+Algorithm : SHA256
+Hash      : 4B26AC34EF24EB3A3646F7869F2F27971804DC65A2E4FB8EF2EB9A62CB7D433B
+Path      : C:\Dev\Duoc\DAMI\pizzeria-kotlin\src\main\kotlin\org\example\Registro.kt
+
+Algorithm : SHA256
+Hash      : D7D115E4C63F2B03EC112332C54F2CFE0CE52653CA2B46920A7179A75EE747C0
+Path      : C:\Dev\Duoc\DAMI\PMY2201_Exp1_S3_FormaB_pizzeria-kotlin.zip

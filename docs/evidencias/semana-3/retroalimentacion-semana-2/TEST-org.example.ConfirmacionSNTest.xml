@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.ConfirmacionSNTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-11-06T18:56:28.337Z" hostname="equipo-local" time="0.416">
+  <properties/>
+  <testcase name="textoArbitrarioSeguidoDeSAfirma()" classname="org.example.ConfirmacionSNTest" time="0.081"/>
+  <testcase name="invalidasAntesDeNConservanLaPrimeraLineaYLasNotas()" classname="org.example.ConfirmacionSNTest" time="0.159"/>
+  <testcase name="pedidosConVariosProductosAceptanSYNConEspaciosYConservanReparto()" classname="org.example.ConfirmacionSNTest" time="0.013"/>
+  <testcase name="aceptaNMayusculaYMinuscula()" classname="org.example.ConfirmacionSNTest" time="0.001"/>
+  <testcase name="eofEnConfirmacionesPreservaPedidoPrevioInventarioYRepartidorOcupado()" classname="org.example.ConfirmacionSNTest" time="0.009"/>
+  <testcase name="variasInvalidasNoSeInterpretanComoNegativa()" classname="org.example.ConfirmacionSNTest" time="0.0"/>
+  <testcase name="recortaEspaciosExterioresSinAceptarPalabras()" classname="org.example.ConfirmacionSNTest" time="0.001"/>
+  <testcase name="aceptaSMayusculaYMinuscula()" classname="org.example.ConfirmacionSNTest" time="0.001"/>
+  <testcase name="eofSinRespuestaCancelaEnUnaSolaLectura()" classname="org.example.ConfirmacionSNTest" time="0.003"/>
+  <testcase name="reintentosNoRegistranNiConsumenAntesDeCompletarNotas()" classname="org.example.ConfirmacionSNTest" time="0.004"/>
+  <testcase name="eofDespuesDeInvalidasCancelaSinConvertirseEnN()" classname="org.example.ConfirmacionSNTest" time="0.001"/>
+  <testcase name="textoArbitrarioSeguidoDeNNiega()" classname="org.example.ConfirmacionSNTest" time="0.001"/>
+  <testcase name="soloEspaciosRepiteLaMismaPregunta()" classname="org.example.ConfirmacionSNTest" time="0.001"/>
+  <testcase name="cadenaVaciaRepiteLaMismaPregunta()" classname="org.example.ConfirmacionSNTest" time="0.001"/>
+  <testcase name="respuestaInvalidaNoTerminaLaSeleccionDeProductos()" classname="org.example.ConfirmacionSNTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

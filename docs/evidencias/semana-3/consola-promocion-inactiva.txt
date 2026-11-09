@@ -1,0 +1,61 @@
+=== Pizzería Kotlin | Semana 3 ===
+Impuesto configurable: 0.19 (supuesto académico). Distancias de reparto simuladas desde el local.
+Fecha de pedidos: 2026-11-08 | Promoción: Promocion(inicio=2026-11-01, fin=2026-11-07, porcentaje=0.15)
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Teléfono válido conservado: no es representable como +XX (XXX) XXX-XXXX sin alterar dígitos.
+Correo electrónico:
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío: Margarita):
+Pizza Margarita seleccionada.
+Cantidad de pizzas (entero entre 1 y 100):
+¿Agregar otra pizza al pedido? (s/n):
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío: Margarita):
+Pizza Pepperoni seleccionada.
+Cantidad de pizzas (entero entre 1 y 100):
+¿Agregar otra pizza al pedido? (s/n):
+Notas opcionales (vacío: Sin notas):
+Disponibilidad confirmada. Puede prepararse el pedido. Inventario actualizado.
+=== Resumen del pedido PED-001 ===
+--- Identificación del pedido ---
+Identificador: PED-001
+Fecha: 2026-11-08
+
+--- Datos del cliente ---
+Cliente: José
+Dirección: Centro
+Teléfono: +56912345678
+Correo: cliente@example.com
+
+--- Productos y cantidades ---
+Pizza: Margarita
+  Precio unitario: $8.000 CLP | Cantidad: 2
+Pizza: Pepperoni
+  Precio unitario: $9.000 CLP | Cantidad: 2
+Cantidad total de pizzas: 4
+Notas: Sin notas
+
+--- Detalle monetario ---
+Subtotal solicitado: $34.000 CLP
+Descuento aplicado: $3.400 CLP
+Promoción por fechas: 2026-11-01 a 2026-11-07 (extremos incluidos), 15 %; no vigente
+Descuento por cantidad: $3.400 CLP
+Descuento promocional: $0 CLP
+Política: mayor descuento, sin acumulación; en empate se aplica cantidad.
+Impuestos (19 %): $5.814 CLP
+Total a pagar: $36.414 CLP
+
+--- Estado y asignación de reparto ---
+Estado: En preparación
+Repartidor asignado: Sin asignar
+Notificación local simulada a cliente@example.com: pedido PED-001, En preparación.
+Inventario restante: {Masa=6, Tomate=12, Queso=12, Pepperoni=3}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+=== Pedidos del día ===
+PED-001 | José | Margarita x2, Pepperoni x2 | $36.414 CLP | En preparación
+Completados (Entregado): 0 | Pendientes (Registrado, En preparación, Listo, En camino): 1 | Rechazados: 0

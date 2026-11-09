@@ -1,0 +1,17 @@
+Auditoría inicial — 3 de noviembre de 2026 (America/Santiago)
+Proyecto: pizzeria-kotlin
+Rama: semana-3
+Último commit: 5479c38 incorpora mejoras de presentación tras retroalimentación de Semana 1.
+Estado inicial: git status --short sin cambios.
+Diferencias iniciales respecto de main: 8 archivos, 292 inserciones y 4 eliminaciones.
+Punto de partida: resumen seccionado y 65 pruebas automatizadas.
+Lecturas: fuentes de producción y pruebas, README, informes y evidencias históricas.
+Material de referencia: instrucciones específicas Forma B, pauta sumativa y guía de aprendizaje de Semana 3.
+Prioridad de requisitos: instrucciones específicas, descriptores de logro completo, guía y compatibilidad histórica.
+Compilación inicial: gradlew.bat clean build --console=plain, BUILD SUCCESSFUL in 30s; 8 tareas ejecutadas.
+65 pruebas aprobadas en la línea base, sin fallos, errores ni omisiones.
+Kotlin de la aplicación: plugin JVM 2.2.20. Gradle Wrapper: 9.6.0.
+Toolchain declarado: JDK 21, proveedor Amazon. Gradle detectó Corretto 21.0.12.1 y 21.0.11.
+Lanzador de Gradle: Microsoft JDK 21.0.12. El Kotlin integrado de Gradle (2.3.21) es independiente del plugin de la aplicación.
+ZIP histórico existente: [nombre local del ZIP omitido].
+SHA-256 inicial: 37FD2B4DF2995AC3D2C411703CB4DB1D4CAD78416087DA70E5DB028924B08A95.

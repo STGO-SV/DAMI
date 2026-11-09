@@ -283,7 +283,7 @@ class PedidoTest {
     }
     @Test fun resumenCompletoIncluyeDatosImportesYEstado() {
         val resumen = registrar(cantidad = 4).resumen()
-        for (texto in listOf("PED-001", "Cliente: José", "Dirección: Ñuñoa 123", "Teléfono: +56901234567", "Correo: jose@example.com",
+        for (texto in listOf("PED-001", "Cliente: José", "Dirección: Ñuñoa 123", "Teléfono: (+56) 9 0123 4567", "Correo: jose@example.com",
             "Pizza: Margarita", "Precio unitario: $8.000 CLP", "Cantidad: 4", "Subtotal solicitado: $32.000 CLP",
             "Descuento aplicado: $3.200 CLP", "Impuestos (19 %): $5.472 CLP", "Total a pagar: $34.272 CLP",
             "Estado: En preparación", "Repartidor asignado: Sin asignar", "Notas: Sin notas")) assertTrue(resumen.contains(texto), texto)
@@ -306,13 +306,13 @@ class PedidoTest {
         assertEquals(3, Regex("Datos inválidos:").findAll(salida).count())
         assertEquals(12L, jornada.inventario.consultar()["Masa"])
     }
-    @Test fun consolaRechazoYEntradasInvalidasConservanInventario() {
+    @Test fun consolaExcesoDeStockYEntradasInvalidasPermitenCorregirCantidad() {
         val jornada = Jornada()
-        val inicial = jornada.inventario.consultar()
-        val salida = conversar(listOf("1", "Ana", "Centro", "abc", "mal", "1", "0", "-2", "texto", "11", "n", "", "0"), jornada)
+        val salida = conversar(listOf("1", "Ana", "Centro", "abc", "mal", "ana@example.cl", "1", "0", "-2", "texto", "11", "2", "n", "", "0"), jornada)
         assertEquals(3, Regex("Cantidad inválida").findAll(salida).count())
-        for (texto in listOf("Teléfono inválido", "Correo inválido", "Reabastecer", "Total a pagar: $0 CLP", "Estado: Rechazado")) assertTrue(salida.contains(texto), texto)
-        assertEquals(inicial, jornada.inventario.consultar())
+        for (texto in listOf("Teléfono inválido", "Correo inválido", "Máximo disponible: 10.", "Total a pagar: $19.040 CLP")) assertTrue(salida.contains(texto), texto)
+        assertEquals(2, jornada.pedidos().single().cantidadPizzas)
+        assertEquals(8L, jornada.inventario.consultar()["Masa"])
     }
     @Test fun entradaNulaTerminaSinExcepcionYAltaIncompletaSeCancela() {
         assertTrue(conversar(emptyList()).contains("Pedidos del día"))

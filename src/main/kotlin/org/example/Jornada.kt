@@ -1,13 +1,23 @@
 package org.example
 
 import java.math.BigDecimal
+import java.time.Clock
+import java.time.LocalDate
+import java.time.ZoneId
 
 class Jornada(
     val inventario: Inventario = inventarioInicial(),
     val repartidores: List<Repartidor> = repartidoresIniciales(),
-    val tasaImpuesto: BigDecimal = BigDecimal("0.19")
+    val tasaImpuesto: BigDecimal = BigDecimal("0.19"),
+    val promocion: Promocion? = null,
+    val reloj: Clock = Clock.system(ZoneId.of("America/Santiago"))
 ) {
     private var pedidosDelDia: Array<Pedido> = emptyArray()
+    private val clientes = Registro<Cliente>()
+    private val catalogo = Registro<Producto>().also { registro -> catalogoInicial().forEach { registro.registrar(it) } }
+    fun clientesRegistrados(): List<Cliente> = clientes.listar()
+    fun productosRegistrados(): List<Producto> = catalogo.listar()
+    fun clienteRegistrado(cliente: Cliente): Boolean = clientes.buscar(cliente) != null
     init { require(tasaImpuesto >= BigDecimal.ZERO && tasaImpuesto <= BigDecimal.ONE) }
     fun pedidos(): Array<Pedido> = pedidosDelDia.copyOf()
     fun completados(): List<Pedido> = pedidosDelDia.filter { it.completado }
@@ -15,11 +25,18 @@ class Jornada(
     fun rechazados(): List<Pedido> = pedidosDelDia.filter { it.estado == EstadoPedido.RECHAZADO }
 
     fun registrar(cliente: Cliente, productos: List<LineaPedido>, notas: String?): Pair<Pedido, List<Faltante>> {
+        val fichas = productos.map { it.producto }
+        for (producto in fichas) {
+            val registrados = fichas.filter { it == producto } + listOfNotNull(catalogo.buscar(producto))
+            require(registrados.all { it.mismaFicha(producto) }) { "Producto duplicado con ficha incompatible: ${producto.nombre}." }
+        }
         val pedido = Pedido("PED-${(pedidosDelDia.size + 1).toString().padStart(3, '0')}",
-            cliente, productos, notas, tasaImpuesto)
+            cliente, productos, notas, tasaImpuesto, LocalDate.now(reloj), promocion)
         val necesarios = calcularIngredientes(productos)
         val faltantes = inventario.consumir(necesarios)
         pedido.resolverInventario(faltantes.isEmpty())
+        clientes.registrar(cliente)
+        fichas.forEach { catalogo.registrar(it) }
         pedidosDelDia += pedido
         return pedido to faltantes
     }

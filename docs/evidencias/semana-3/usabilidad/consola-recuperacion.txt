@@ -1,0 +1,63 @@
+﻿=== Pizzería Kotlin | Semana 3 ===
+Impuesto configurable: 0.19 (supuesto académico). Distancias de reparto simuladas desde el local.
+Fecha de pedidos: 2026-11-03 | Promoción: Sin promoción por fechas
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Correo electrónico:
+Correo inválido. Ingrese nombre@dominio.com; el correo es obligatorio.
+Correo electrónico:
+Correo inválido. Ingrese nombre@dominio.com; el correo es obligatorio.
+Correo electrónico:
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío: Margarita):
+Ingrese C para cancelar el pedido.
+Pizza inexistente. Seleccione una opción válida.
+Seleccione pizza (vacío: Margarita):
+Ingrese C para cancelar el pedido.
+Pizza Margarita seleccionada.
+Unidades disponibles para este pedido: 10
+¿Cuántas pizzas Margarita desea pedir?
+Cantidad inválida. Ingrese un entero entre 1 y 100.
+Ingrese una cantidad válida:
+Cantidad inválida. Ingrese un entero entre 1 y 100.
+Ingrese una cantidad válida:
+Cantidad inválida. Ingrese un entero entre 1 y 100.
+Ingrese una cantidad válida:
+¿Agregar otra pizza al pedido? (S/N):
+Notas opcionales (vacío: Sin notas):
+Disponibilidad confirmada. Puede prepararse el pedido. Inventario actualizado.
+=== Resumen del pedido PED-001 ===
+--- Identificación del pedido ---
+Identificador: PED-001
+Fecha: 2026-11-03
+
+--- Datos del cliente ---
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: +12 (345) 678-9012
+Correo: cliente@example.cl
+
+--- Productos y cantidades ---
+Pizza: Margarita
+  Precio unitario: $8.000 CLP | Cantidad: 1
+Cantidad total de pizzas: 1
+Notas: Sin notas
+
+--- Detalle monetario ---
+Subtotal solicitado: $8.000 CLP
+Descuento aplicado: $0 CLP
+Impuestos (19 %): $1.520 CLP
+Total a pagar: $9.520 CLP
+
+--- Estado y asignación de reparto ---
+Estado: En preparación
+Repartidor asignado: Sin asignar
+Notificación local simulada a cliente@example.cl: pedido PED-001, En preparación.
+Inventario restante: {Masa=9, Tomate=18, Queso=18, Pepperoni=5}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+=== Pedidos del día ===
+PED-001 | José | Margarita x1 | $9.520 CLP | En preparación
+Completados (Entregado): 0 | Pendientes (Registrado, En preparación, Listo, En camino): 1 | Rechazados: 0

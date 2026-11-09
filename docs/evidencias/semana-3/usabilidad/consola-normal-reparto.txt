@@ -1,0 +1,144 @@
+﻿=== Pizzería Kotlin | Semana 3 ===
+Impuesto configurable: 0.19 (supuesto académico). Distancias de reparto simuladas desde el local.
+Fecha de pedidos: 2026-11-03 | Promoción: Sin promoción por fechas
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Correo electrónico:
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío: Margarita):
+Ingrese C para cancelar el pedido.
+Pizza Margarita seleccionada.
+Unidades disponibles para este pedido: 10
+¿Cuántas pizzas Margarita desea pedir?
+¿Agregar otra pizza al pedido? (S/N):
+Notas opcionales (vacío: Sin notas):
+Disponibilidad confirmada. Puede prepararse el pedido. Inventario actualizado.
+=== Resumen del pedido PED-001 ===
+--- Identificación del pedido ---
+Identificador: PED-001
+Fecha: 2026-11-03
+
+--- Datos del cliente ---
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: (+56) 9 1234 5678
+Correo: jose@example.com
+
+--- Productos y cantidades ---
+Pizza: Margarita
+  Precio unitario: $8.000 CLP | Cantidad: 4
+Cantidad total de pizzas: 4
+Notas: sin sal
+
+--- Detalle monetario ---
+Subtotal solicitado: $32.000 CLP
+Descuento aplicado: $3.200 CLP
+Impuestos (19 %): $5.472 CLP
+Total a pagar: $34.272 CLP
+
+--- Estado y asignación de reparto ---
+Estado: En preparación
+Repartidor asignado: Sin asignar
+Notificación local simulada a jose@example.com: pedido PED-001, En preparación.
+Inventario restante: {Masa=6, Tomate=12, Queso=12, Pepperoni=5}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+Identificador del pedido (por ejemplo PED-001):
+=== Resumen del pedido PED-001 ===
+--- Identificación del pedido ---
+Identificador: PED-001
+Fecha: 2026-11-03
+
+--- Datos del cliente ---
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: (+56) 9 1234 5678
+Correo: jose@example.com
+
+--- Productos y cantidades ---
+Pizza: Margarita
+  Precio unitario: $8.000 CLP | Cantidad: 4
+Cantidad total de pizzas: 4
+Notas: sin sal
+
+--- Detalle monetario ---
+Subtotal solicitado: $32.000 CLP
+Descuento aplicado: $3.200 CLP
+Impuestos (19 %): $5.472 CLP
+Total a pagar: $34.272 CLP
+
+--- Estado y asignación de reparto ---
+Estado: Listo
+Repartidor asignado: Sin asignar
+Notificación local simulada a jose@example.com: pedido PED-001, Listo.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+Identificador del pedido (por ejemplo PED-001):
+Repartidor: R02 - Diego | Distancia simulada: 500 m | Disponible: false
+=== Resumen del pedido PED-001 ===
+--- Identificación del pedido ---
+Identificador: PED-001
+Fecha: 2026-11-03
+
+--- Datos del cliente ---
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: (+56) 9 1234 5678
+Correo: jose@example.com
+
+--- Productos y cantidades ---
+Pizza: Margarita
+  Precio unitario: $8.000 CLP | Cantidad: 4
+Cantidad total de pizzas: 4
+Notas: sin sal
+
+--- Detalle monetario ---
+Subtotal solicitado: $32.000 CLP
+Descuento aplicado: $3.200 CLP
+Impuestos (19 %): $5.472 CLP
+Total a pagar: $34.272 CLP
+
+--- Estado y asignación de reparto ---
+Estado: En camino
+Repartidor asignado: R02 - Diego
+Notificación local simulada a jose@example.com: pedido PED-001, En camino.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+Identificador del pedido (por ejemplo PED-001):
+=== Resumen del pedido PED-001 ===
+--- Identificación del pedido ---
+Identificador: PED-001
+Fecha: 2026-11-03
+
+--- Datos del cliente ---
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: (+56) 9 1234 5678
+Correo: jose@example.com
+
+--- Productos y cantidades ---
+Pizza: Margarita
+  Precio unitario: $8.000 CLP | Cantidad: 4
+Cantidad total de pizzas: 4
+Notas: sin sal
+
+--- Detalle monetario ---
+Subtotal solicitado: $32.000 CLP
+Descuento aplicado: $3.200 CLP
+Impuestos (19 %): $5.472 CLP
+Total a pagar: $34.272 CLP
+
+--- Estado y asignación de reparto ---
+Estado: Entregado
+Repartidor asignado: R02 - Diego
+Notificación local simulada a jose@example.com: pedido PED-001, Entregado.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+=== Pedidos del día ===
+PED-001 | José | Margarita x4 | $34.272 CLP | Entregado
+Completados (Entregado): 1 | Pendientes (Registrado, En preparación, Listo, En camino): 0 | Rechazados: 0
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+Inventario (unidades de receta): {Masa=6, Tomate=12, Queso=12, Pepperoni=5}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+=== Pedidos del día ===
+PED-001 | José | Margarita x4 | $34.272 CLP | Entregado
+Completados (Entregado): 1 | Pendientes (Registrado, En preparación, Listo, En camino): 0 | Rechazados: 0

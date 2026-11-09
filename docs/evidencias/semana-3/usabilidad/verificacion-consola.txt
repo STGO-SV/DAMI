@@ -1,0 +1,24 @@
+﻿CORRECTO: consola-normal-reparto | código 0 | 14 comprobaciones
+CORRECTO: consola-recuperacion | código 0 | 9 comprobaciones
+CORRECTO: consola-promocion-activa | código 0 | 11 comprobaciones
+CORRECTO: consola-promocion-inactiva | código 0 | 11 comprobaciones
+CORRECTO: consola-promocion-inicio | código 0 | 11 comprobaciones
+CORRECTO: consola-promocion-fin | código 0 | 11 comprobaciones
+CORRECTO: consola-promocion-dia-anterior | código 0 | 11 comprobaciones
+CORRECTO: consola-promocion-menor-que-cantidad | código 0 | 11 comprobaciones
+CORRECTO: consola-disponibilidad-mixta | código 0 | 8 comprobaciones
+CORRECTO: consola-agotada-cancelacion | código 0 | 5 comprobaciones
+CORRECTO: consola-eof-correo | código 0 | 5 comprobaciones
+CORRECTO: consola-duplicados | código 0 | 5 comprobaciones
+CORRECTO: consola-demostracion | código 0 | 31 comprobaciones
+CORRECTO: consola-menu-demostracion | código 0 | 4 comprobaciones
+CORRECTO: consola-reabastecer-tasa-cero | código 0 | 5 comprobaciones
+CORRECTO: consola-confirmaciones-reintentos | código 0 | 10 comprobaciones
+CORRECTO: consola-confirmaciones-negativa | código 0 | 6 comprobaciones
+CORRECTO: consola-confirmaciones-eof | código 0 | 7 comprobaciones
+CORRECTO: consola-configuracion-invalida | código 0 | 2 comprobaciones
+CORRECTO: consola-fecha-invalida | código 0 | 2 comprobaciones
+CORRECTO: consola-promocion-negativa | código 0 | 2 comprobaciones
+CORRECTO: consola-promocion-superior-a-uno | código 0 | 2 comprobaciones
+CORRECTO: consola-promocion-incompleta | código 0 | 2 comprobaciones
+TOTAL: 23 escenarios, 185 comprobaciones de salida, todos con código 0.

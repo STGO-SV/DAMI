@@ -40,11 +40,12 @@ class RetroalimentacionSemana1Test {
             === Resumen del pedido PED-001 ===
             --- Identificación del pedido ---
             Identificador: PED-001
+            Fecha: ${pedido.fecha}
 
             --- Datos del cliente ---
             Cliente: José
             Dirección: Ñuñoa 123
-            Teléfono: +56901234567
+            Teléfono: (+56) 9 0123 4567
             Correo: jose@example.com
 
             --- Productos y cantidades ---

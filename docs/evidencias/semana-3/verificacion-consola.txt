@@ -1,0 +1,13 @@
+CORRECTO: consola-normal-reparto | código 0 | 14 comprobaciones
+CORRECTO: consola-recuperacion | código 0 | 9 comprobaciones
+CORRECTO: consola-promocion-activa | código 0 | 8 comprobaciones
+CORRECTO: consola-promocion-inactiva | código 0 | 5 comprobaciones
+CORRECTO: consola-rechazo-mixto | código 0 | 6 comprobaciones
+CORRECTO: consola-eof-correo | código 0 | 5 comprobaciones
+CORRECTO: consola-duplicados | código 0 | 5 comprobaciones
+CORRECTO: consola-demostracion | código 0 | 25 comprobaciones
+CORRECTO: consola-menu-demostracion | código 0 | 4 comprobaciones
+CORRECTO: consola-reabastecer-tasa-cero | código 0 | 5 comprobaciones
+CORRECTO: consola-configuracion-invalida | código 0 | 1 comprobaciones
+CORRECTO: consola-fecha-invalida | código 0 | 1 comprobaciones
+TOTAL: 12 escenarios, 88 comprobaciones de salida, todos con código 0.

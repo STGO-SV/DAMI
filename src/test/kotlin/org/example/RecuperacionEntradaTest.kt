@@ -28,7 +28,7 @@ class RecuperacionEntradaTest {
         val cliente = jornada.pedidos().single().cliente
         assertEquals("José", cliente.nombre)
         assertEquals("Ñuñoa 123", cliente.direccion)
-        assertEquals("+56901234567", cliente.telefono)
+        assertEquals("(+56) 9 0123 4567", cliente.telefono)
         assertEquals("jose@example.com", cliente.correo)
         for (campo in listOf("Nombre del cliente:", "Dirección de entrega:", "Teléfono de contacto:", "Correo electrónico:")) {
             assertEquals(1, salida.lineSequence().count { it == campo }, campo)
@@ -96,12 +96,13 @@ class RecuperacionEntradaTest {
     }
 
     @Test fun entradasVaciasConservanPredeterminadosSinConfundirseConEof() {
-        val (jornada, salida) = conversar(listOf("1", "", "", "", "", "", "", "1", "", "", "0"))
+        val (jornada, salida) = conversar(listOf("1", "", "", "", "", "cliente@example.com", "", "", "1", "n", "", "0"))
         val pedido = jornada.pedidos().single()
         assertEquals("Cliente sin nombre", pedido.cliente.nombre)
         assertEquals("Retiro en local", pedido.cliente.direccion)
         assertEquals("No informado", pedido.cliente.telefono)
-        assertEquals("correo@invalido.com", pedido.cliente.correo)
+        assertEquals("cliente@example.com", pedido.cliente.correo)
+        assertTrue(salida.contains("Correo inválido"))
         assertEquals("Margarita", pedido.productos.single().producto.nombre)
         assertNull(pedido.notas)
         assertTrue(salida.contains("Notas: Sin notas"))

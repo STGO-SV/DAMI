@@ -1,0 +1,189 @@
+﻿=== Pizzería Kotlin | Semana 3 ===
+Impuesto configurable: 0.19 (supuesto académico). Distancias de reparto simuladas desde el local.
+Fecha de pedidos: 2026-11-03 | Promoción: Sin promoción por fechas
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+=== Demostración integrada | Semana 3 ===
+Datos académicos; cotizaciones sin cobro ni consumo de inventario.
+--- Regex y rangos ---
+Correo 'cliente@example.com': válido
+Correo 'cliente@example.cl': válido
+Correo 'sin-arroba': inválido
+Correo 'a b@example.com': inválido
+Teléfono '+12 345 678 9012': +12 (345) 678-9012
+Teléfono '+56912345678': (+56) 9 1234 5678
+Teléfono 'abc': inválido
+Cantidad 0: inválida
+Cantidad 1: válida
+Cantidad 100: válida
+Cantidad 101: inválida
+--- Anotaciones y reflection ---
+Margarita: promocionable=true
+Pepperoni: promocionable=true
+Producto de referencia: promocionable=false
+Clase: Margarita
+Anotaciones: @Promocionable(Pizza clásica)
+Propiedades: categoria: kotlin.String, ingredientes: kotlin.collections.Map<kotlin.String, kotlin.Long>, nombre: kotlin.String, precio: kotlin.Long
+Métodos: detallarProducto(): kotlin.String, equals(kotlin.Any?): kotlin.Boolean, hashCode(): kotlin.Int
+Clase: Pepperoni
+Anotaciones: @Promocionable(Pizza con pepperoni)
+Propiedades: categoria: kotlin.String, ingredientes: kotlin.collections.Map<kotlin.String, kotlin.Long>, nombre: kotlin.String, precio: kotlin.Long
+Métodos: detallarProducto(): kotlin.String, equals(kotlin.Any?): kotlin.Boolean, hashCode(): kotlin.Int
+Clase: Producto
+Anotaciones: Sin anotaciones
+Propiedades: categoria: kotlin.String, ingredientes: kotlin.collections.Map<kotlin.String, kotlin.Long>, nombre: kotlin.String, precio: kotlin.Long
+Métodos: detallarProducto(): kotlin.String, equals(kotlin.Any?): kotlin.Boolean, hashCode(): kotlin.Int
+Clase: Pedido
+Anotaciones: Sin anotaciones
+Propiedades: cantidadPizzas: kotlin.Int, cliente: org.example.Cliente, completado: kotlin.Boolean, esSimulacion: kotlin.Boolean, estado: org.example.EstadoPedido, fecha: java.time.LocalDate, idPedido: kotlin.String, notas: kotlin.String?, pendiente: kotlin.Boolean, productos: kotlin.collections.List<org.example.LineaPedido>, promocion: org.example.Promocion?, repartidor: org.example.Repartidor?, tasaImpuesto: java.math.BigDecimal
+Métodos: calcularImportes(): org.example.Importes, cambiarEstado(org.example.EstadoPedido): kotlin.Unit, component1(): org.example.Cliente, component2(): kotlin.collections.List<org.example.LineaPedido>, component3(): kotlin.Long, notificarCliente(): kotlin.String?, plus(org.example.Pedido): org.example.Pedido, resumen(): kotlin.String
+--- Operadores y recálculo ---
+Pedidos combinados mediante +: DEMO-A + DEMO-B = SIM(DEMO-A+DEMO-B)
+Totales originales: $19.040 CLP y $21.420 CLP
+=== Resumen del pedido SIM(DEMO-A+DEMO-B) ===
+--- Identificación del pedido ---
+Identificador: SIM(DEMO-A+DEMO-B)
+Fecha: 2026-11-03
+Cotización de simulación: sin registro, cobro, inventario ni reparto.
+
+--- Datos del cliente ---
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: +12 (345) 678-9012
+Correo: cliente@example.com
+
+--- Productos y cantidades ---
+Pizza: Margarita
+  Precio unitario: $8.000 CLP | Cantidad: 2
+Pizza: Pepperoni
+  Precio unitario: $9.000 CLP | Cantidad: 2
+Cantidad total de pizzas: 4
+Notas: sin sal | tocar timbre
+
+--- Detalle monetario ---
+Subtotal solicitado: $34.000 CLP
+Descuento aplicado: $3.400 CLP
+Impuestos (19 %): $5.814 CLP
+Total a pagar: $36.414 CLP
+
+--- Estado y asignación de reparto ---
+Estado: Registrado
+Repartidor asignado: Sin asignar
+--- Promociones por fechas ---
+Promoción activa: 2026-11-03
+=== Resumen del pedido DEMO-PROMO-2026-11-03 ===
+--- Identificación del pedido ---
+Identificador: DEMO-PROMO-2026-11-03
+Fecha: 2026-11-03
+Cotización de simulación: sin registro, cobro, inventario ni reparto.
+
+--- Datos del cliente ---
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: +12 (345) 678-9012
+Correo: cliente@example.com
+
+--- Productos y cantidades ---
+Pizza: Margarita
+  Precio unitario: $8.000 CLP | Cantidad: 2
+Pizza: Pepperoni
+  Precio unitario: $9.000 CLP | Cantidad: 2
+Cantidad total de pizzas: 4
+Notas: Sin notas
+
+--- Detalle monetario ---
+Subtotal solicitado: $34.000 CLP
+Descuento aplicado: $5.100 CLP
+Promoción por fechas: 2026-11-01 a 2026-11-07 (extremos incluidos), 15 %; vigente
+Descuento por cantidad: $0 CLP
+Descuento promocional: $5.100 CLP
+Base imponible: $28.900 CLP
+Política: mayor descuento, sin acumulación; en empate se aplica cantidad.
+Impuestos (19 %): $5.491 CLP
+Total a pagar: $34.391 CLP
+
+--- Estado y asignación de reparto ---
+Estado: Registrado
+Repartidor asignado: Sin asignar
+Promoción inactiva: 2026-11-08
+=== Resumen del pedido DEMO-PROMO-2026-11-08 ===
+--- Identificación del pedido ---
+Identificador: DEMO-PROMO-2026-11-08
+Fecha: 2026-11-08
+Cotización de simulación: sin registro, cobro, inventario ni reparto.
+
+--- Datos del cliente ---
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: +12 (345) 678-9012
+Correo: cliente@example.com
+
+--- Productos y cantidades ---
+Pizza: Margarita
+  Precio unitario: $8.000 CLP | Cantidad: 2
+Pizza: Pepperoni
+  Precio unitario: $9.000 CLP | Cantidad: 2
+Cantidad total de pizzas: 4
+Notas: Sin notas
+
+--- Detalle monetario ---
+Subtotal solicitado: $34.000 CLP
+Descuento aplicado: $3.400 CLP
+Promoción por fechas: 2026-11-01 a 2026-11-07 (extremos incluidos), 15 %; no vigente
+Descuento por cantidad: $3.400 CLP
+Descuento promocional: $0 CLP
+Base imponible: $30.600 CLP
+Política: mayor descuento, sin acumulación; en empate se aplica cantidad.
+Impuestos (19 %): $5.814 CLP
+Total a pagar: $36.414 CLP
+
+--- Estado y asignación de reparto ---
+Estado: Registrado
+Repartidor asignado: Sin asignar
+=== Resumen del pedido DEMO-ELEGIBILIDAD ===
+--- Identificación del pedido ---
+Identificador: DEMO-ELEGIBILIDAD
+Fecha: 2026-11-03
+Cotización de simulación: sin registro, cobro, inventario ni reparto.
+
+--- Datos del cliente ---
+Cliente: José
+Dirección: Ñuñoa 123
+Teléfono: +12 (345) 678-9012
+Correo: cliente@example.com
+
+--- Productos y cantidades ---
+Pizza: Margarita
+  Precio unitario: $8.000 CLP | Cantidad: 1
+Pizza: Producto de referencia
+  Precio unitario: $8.000 CLP | Cantidad: 1
+Cantidad total de pizzas: 2
+Notas: Sin notas
+
+--- Detalle monetario ---
+Subtotal solicitado: $16.000 CLP
+Descuento aplicado: $1.200 CLP
+Promoción por fechas: 2026-11-01 a 2026-11-07 (extremos incluidos), 15 %; vigente
+Descuento por cantidad: $0 CLP
+Descuento promocional: $1.200 CLP
+Base imponible: $14.800 CLP
+Política: mayor descuento, sin acumulación; en empate se aplica cantidad.
+Impuestos (19 %): $2.812 CLP
+Total a pagar: $17.612 CLP
+
+--- Estado y asignación de reparto ---
+Estado: Registrado
+Repartidor asignado: Sin asignar
+--- Desestructuración ---
+Cliente desestructurado: José | cliente@example.com | +12 (345) 678-9012
+Pedido desestructurado: José | Margarita x2, Pepperoni x2 | $36.414 CLP
+--- Igualdad y registros sin duplicados ---
+Clientes ==: true
+Productos ==: true
+Registro cliente: nuevo=true, duplicado agregado=false, fichas=1
+Registro producto: nuevo=true, duplicado agregado=false, fichas=1
+Resumen final: combinación=$36.414 CLP; originales Registrado/Registrado; registros únicos=1/1.
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+Inventario (unidades de receta): {Masa=10, Tomate=20, Queso=20, Pepperoni=5}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+=== Pedidos del día ===
+Completados (Entregado): 0 | Pendientes (Registrado, En preparación, Listo, En camino): 0 | Rechazados: 0

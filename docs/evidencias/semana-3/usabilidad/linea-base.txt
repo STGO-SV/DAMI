@@ -1,0 +1,14 @@
+
+name                                     tests failures errors skipped
+----                                     ----- -------- ------ -------
+org.example.ConfirmacionSNTest           15    0        0      0
+org.example.IntegracionSemana3Test       5     0        0      0
+org.example.OperadoresIgualdadTest       12    0        0      0
+org.example.PedidoTest                   46    0        0      0
+org.example.PromocionTest                8     0        0      0
+org.example.RecuperacionEntradaTest      12    0        0      0
+org.example.RetroalimentacionSemana1Test 7     0        0      0
+org.example.ValidacionSemana3Test        7     0        0      0
+
+
+gradlew.bat test --rerun-tasks --console=plain: BUILD SUCCESSFUL in 19s (112 pruebas aprobadas).

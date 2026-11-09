@@ -1,0 +1,65 @@
+﻿=== Pizzería Kotlin | Semana 3 ===
+Impuesto configurable: 0.19 (supuesto académico). Distancias de reparto simuladas desde el local.
+Fecha de pedidos: 2026-11-03 | Promoción: Sin promoción por fechas
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+Nombre del cliente:
+Dirección de entrega:
+Teléfono de contacto:
+Correo electrónico:
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío: Margarita):
+Ingrese C para cancelar el pedido.
+Pizza Margarita seleccionada.
+Unidades disponibles para este pedido: 10
+¿Cuántas pizzas Margarita desea pedir?
+¿Agregar otra pizza al pedido? (S/N):
+1 Margarita | $8.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades
+2 Pepperoni | $9.000 CLP | Ingredientes: Masa: 1 unidades, Tomate: 2 unidades, Queso: 2 unidades, Pepperoni: 1 unidades
+Seleccione pizza (vacío: Margarita):
+Ingrese C para cancelar el pedido.
+Pizza Pepperoni seleccionada.
+Unidades disponibles para este pedido: 2
+¿Cuántas pizzas Pepperoni desea pedir?
+La cantidad solicitada supera la disponibilidad.
+Máximo disponible: 2.
+Ingrese una cantidad válida:
+¿Agregar otra pizza al pedido? (S/N):
+Notas opcionales (vacío: Sin notas):
+Disponibilidad confirmada. Puede prepararse el pedido. Inventario actualizado.
+=== Resumen del pedido PED-001 ===
+--- Identificación del pedido ---
+Identificador: PED-001
+Fecha: 2026-11-03
+
+--- Datos del cliente ---
+Cliente: Ana
+Dirección: Centro
+Teléfono: (+56) 2 2345 6789
+Correo: ana@example.com
+
+--- Productos y cantidades ---
+Pizza: Margarita
+  Precio unitario: $8.000 CLP | Cantidad: 8
+Pizza: Pepperoni
+  Precio unitario: $9.000 CLP | Cantidad: 2
+Cantidad total de pizzas: 10
+Notas: Sin notas
+
+--- Detalle monetario ---
+Subtotal solicitado: $82.000 CLP
+Descuento aplicado: $8.200 CLP
+Impuestos (19 %): $14.022 CLP
+Total a pagar: $87.822 CLP
+
+--- Estado y asignación de reparto ---
+Estado: En preparación
+Repartidor asignado: Sin asignar
+Notificación local simulada a ana@example.com: pedido PED-001, En preparación.
+Inventario restante: {Masa=0, Tomate=0, Queso=0, Pepperoni=3}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+Inventario (unidades de receta): {Masa=0, Tomate=0, Queso=0, Pepperoni=3}
+1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir
+=== Pedidos del día ===
+PED-001 | Ana | Margarita x8, Pepperoni x2 | $87.822 CLP | En preparación
+Completados (Entregado): 0 | Pendientes (Registrado, En preparación, Listo, En camino): 1 | Rechazados: 0

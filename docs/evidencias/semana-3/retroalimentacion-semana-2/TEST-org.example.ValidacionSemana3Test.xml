@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.ValidacionSemana3Test" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-06T18:56:29.485Z" hostname="equipo-local" time="0.011">
+  <properties/>
+  <testcase name="correoInvalidoYVacioRepitenSoloElCampoYConservanCliente()" classname="org.example.ValidacionSemana3Test" time="0.003"/>
+  <testcase name="eofDuranteReintentoCorreoNoRegistraClienteNiConsumeInventario()" classname="org.example.ValidacionSemana3Test" time="0.001"/>
+  <testcase name="regexAdmiteFormatoAcademicoYRechazaCadenasMalFormadas()" classname="org.example.ValidacionSemana3Test" time="0.001"/>
+  <testcase name="telefonoChilenoYOtrasLongitudesValidasConservanPrefijosYCeros()" classname="org.example.ValidacionSemana3Test" time="0.001"/>
+  <testcase name="cantidadCientoUnoReintentaYCienSeRechazaPorStockSinConsumo()" classname="org.example.ValidacionSemana3Test" time="0.001"/>
+  <testcase name="rangoIncluyeUnoYCienYRechazaValoresFueraDelIntervalo()" classname="org.example.ValidacionSemana3Test" time="0.001"/>
+  <testcase name="telefonoCompatibleSeNormalizaSinCambiarDigitosYEsIdempotente()" classname="org.example.ValidacionSemana3Test" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

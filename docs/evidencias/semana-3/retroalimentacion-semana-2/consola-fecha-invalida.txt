@@ -1,0 +1,1 @@
+﻿Fecha inválida. Use fechas existentes en formato AAAA-MM-DD.

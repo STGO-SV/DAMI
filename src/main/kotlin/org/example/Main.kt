@@ -1,17 +1,17 @@
 package org.example
 
-import java.math.BigDecimal
-
 fun main(args: Array<String>) {
-    val tasa = try {
-        (args.firstOrNull()?.toBigDecimal() ?: BigDecimal("0.19")).also {
-            require(it >= BigDecimal.ZERO && it <= BigDecimal.ONE)
-        }
+    val configuracion = try {
+        leerConfiguracion(args)
     } catch (_: IllegalArgumentException) {
-        println("Tasa inválida. Use un decimal entre 0 y 1, por ejemplo: --args=0.19")
+        println("Configuración inválida. Use impuesto 0..1, --fecha=AAAA-MM-DD y --promocion=inicio,fin,porcentaje (0..1).")
+        return
+    } catch (_: java.time.DateTimeException) {
+        println("Fecha inválida. Use fechas existentes en formato AAAA-MM-DD.")
         return
     }
-    ejecutarJornada(jornada = Jornada(tasaImpuesto = tasa))
+    if (configuracion.demostracion) demostrarSemana3(::println)
+    else ejecutarJornada(jornada = configuracion.jornada())
 }
 
 fun ejecutarJornada(
@@ -19,16 +19,18 @@ fun ejecutarJornada(
     mostrar: (String) -> Unit = { println(it) },
     jornada: Jornada = Jornada()
 ) {
-    mostrar("=== Pizzería Kotlin | Semana 2 ===")
+    mostrar("=== Pizzería Kotlin | Semana 3 ===")
     mostrar("Impuesto configurable: ${jornada.tasaImpuesto} (supuesto académico). Distancias de reparto simuladas desde el local.")
+    mostrar("Fecha de pedidos: ${java.time.LocalDate.now(jornada.reloj)} | Promoción: ${jornada.promocion ?: "Sin promoción por fechas"}")
     while (true) {
-        mostrar("1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 0 Salir")
+        mostrar("1 Nuevo pedido | 2 Reporte | 3 Marcar Listo | 4 Enviar | 5 Entregar | 6 Inventario | 7 Reabastecer | 8 Demostración Semana 3 | 0 Salir")
         val opcion = leer()?.trim() ?: "0"
         try {
             when (opcion) {
                 "0" -> { mostrar(jornada.reporte()); return }
                 "1" -> registrarDesdeConsola(leer, mostrar, jornada)
                 "2" -> mostrar(jornada.reporte())
+                "8" -> demostrarSemana3(mostrar)
                 "3", "4", "5" -> {
                     mostrar("Identificador del pedido (por ejemplo PED-001):")
                     val id = leer()?.trim()
@@ -74,25 +76,30 @@ private fun registrarDesdeConsola(leer: () -> String?, mostrar: (String) -> Unit
     mostrar("Teléfono de contacto:")
     val telefono = leer() ?: return cancelarRegistro(mostrar)
     if (telefonoValido(telefono) == null) mostrar("Teléfono inválido o ausente. Se registrará: No informado.")
-    mostrar("Correo electrónico:")
-    val correo = leer() ?: return cancelarRegistro(mostrar)
-    if (correoValido(correo) == null) mostrar("Correo inválido o ausente. Se registrará: correo@invalido.com.")
+    val correo = leerCorreo(leer, mostrar) ?: return cancelarRegistro(mostrar)
     val cliente = Cliente(nombre, telefono, correo, direccion)
-    val catalogo = catalogoInicial()
+    val catalogo = jornada.productosRegistrados()
     val lineas = mutableListOf<LineaPedido>()
-    var agregarOtra: Boolean
-    do {
+    while (true) {
         catalogo.forEachIndexed { indice, producto -> mostrar("${indice + 1} ${producto.detallarProducto()}") }
         val producto = leerProducto(catalogo, leer, mostrar) ?: return cancelarRegistro(mostrar)
         mostrar("Pizza ${producto.nombre} seleccionada.")
-        val cantidad = leerCantidad(leer, mostrar) ?: return cancelarRegistro(mostrar)
+        val maximo = jornada.inventario.capacidad(producto, lineas)
+        mostrar("Unidades disponibles para este pedido: $maximo")
+        if (maximo == 0) {
+            mostrar("${producto.nombre} está agotada para este pedido. Seleccione otra variedad o ingrese C para cancelar.")
+            continue
+        }
+        val cantidad = leerCantidad(leer, mostrar, "¿Cuántas pizzas ${producto.nombre} desea pedir?", maximo)
+            ?: return cancelarRegistro(mostrar)
         lineas += LineaPedido(producto, cantidad)
-        mostrar("¿Agregar otra pizza al pedido? (s/n):")
-        val respuesta = leer() ?: return cancelarRegistro(mostrar)
-        agregarOtra = respuesta.trim().lowercase() == "s"
-    } while (agregarOtra)
+        val agregarOtra = leerSiNo("¿Agregar otra pizza al pedido? (S/N):", leer, mostrar)
+            ?: return cancelarRegistro(mostrar)
+        if (!agregarOtra) break
+    }
     mostrar("Notas opcionales (vacío: Sin notas):")
     val notas = leer() ?: return cancelarRegistro(mostrar)
+    if (jornada.clienteRegistrado(cliente)) mostrar("Cliente ya registrado: se conserva la primera ficha; este pedido utiliza los datos ingresados.")
     val (pedido, faltantes) = jornada.registrar(cliente, lineas, notas)
     if (faltantes.isEmpty()) mostrar("Disponibilidad confirmada. Puede prepararse el pedido. Inventario actualizado.")
     else {
@@ -105,8 +112,7 @@ private fun registrarDesdeConsola(leer: () -> String?, mostrar: (String) -> Unit
 }
 
 private fun cancelarRegistro(mostrar: (String) -> Unit) {
-    mostrar("Fin de entrada. Registro del pedido cancelado; no se modificó el inventario.")
+    mostrar("Registro del pedido cancelado. El inventario se conserva.")
 }
 
 fun pesos(monto: Long): String = "$" + monto.toString().reversed().chunked(3).joinToString(".").reversed() + " CLP"
-fun pesos(monto: Int): String = pesos(monto.toLong())

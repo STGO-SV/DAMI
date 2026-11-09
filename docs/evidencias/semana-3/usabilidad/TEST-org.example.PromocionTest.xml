@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.PromocionTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-07T18:52:43.027Z" hostname="equipo-local" time="0.013">
+  <properties/>
+  <testcase name="descuentoDelCienPorCientoNoGeneraImpuestosNiTotalesNegativos()" classname="org.example.PromocionTest" time="0.001"/>
+  <testcase name="fechaInyectadaSeConservaYRechazoNoCobraPromocion()" classname="org.example.PromocionTest" time="0.001"/>
+  <testcase name="redondeoPromocionalTruncaAntesDelImpuestoHalfUp()" classname="org.example.PromocionTest" time="0.001"/>
+  <testcase name="rangoDeFechasIncluyeExtremosYExcluyeDiasExternos()" classname="org.example.PromocionTest" time="0.001"/>
+  <testcase name="desbordamientoConPromocionSeDetectaSinEfectosOperativos()" classname="org.example.PromocionTest" time="0.001"/>
+  <testcase name="intervalosYPorcentajesInvalidosSeRechazan()" classname="org.example.PromocionTest" time="0.001"/>
+  <testcase name="descuentoMenorOEmpatadoNoSeAcumulaConCantidad()" classname="org.example.PromocionTest" time="0.001"/>
+  <testcase name="soloLosProductosAnotadosRecibenPromocion()" classname="org.example.PromocionTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
