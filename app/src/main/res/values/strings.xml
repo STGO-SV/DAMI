@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PizzeriaApp</string>
+    <string name="bienvenida">Bienvenidos a la mejor pizzería de la ciudad</string>
+    <string name="catalogo">Catálogo</string>
+    <string name="cotizar_unidad">Cotizar 1 unidad</string>
+    <string name="cotizacion_producto">Cotización de %1$s</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="descuento">Descuento</string>
+    <string name="impuesto">Impuesto</string>
+    <string name="total">Total</string>
+</resources>
